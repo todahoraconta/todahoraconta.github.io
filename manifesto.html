@@ -135,7 +135,83 @@
 
     <hr>
 
-    <h2>O princípio por trás de tudo</h2>
+    <h2>Isso já existe no mundo</h2>
+    <p>A CLT 2.0 não é invenção. É adaptação de modelos que já funcionam:</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2rem 0;">
+      <div style="background:#f0ede7;padding:2rem;border-radius:8px;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🇦🇺</div>
+        <h3 style="color:var(--ink);margin:0 0 0.75rem;">Austrália</h3>
+        <p style="font-size:0.9rem;margin:0;">Trabalhadores "casual" recebem <strong>+25% por hora</strong> (casual loading) como compensação por não terem férias e licenças fixas. Direitos são proporcionais às horas. Múltiplos vínculos são normais e protegidos.</p>
+      </div>
+      <div style="background:#f0ede7;padding:2rem;border-radius:8px;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🇯🇵</div>
+        <h3 style="color:var(--ink);margin:0 0 0.75rem;">Japão</h3>
+        <p style="font-size:0.9rem;margin:0;">Salário mínimo definido <strong>por hora e por região</strong>. Part-timers têm direito a seguro social proporcional. Lei de 2020 proíbe discriminação entre part-time e full-time no mesmo cargo.</p>
+      </div>
+      <div style="background:#f0ede7;padding:2rem;border-radius:8px;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🇳🇱</div>
+        <h3 style="color:var(--ink);margin:0 0 0.75rem;">Holanda</h3>
+        <p style="font-size:0.9rem;margin:0;">Líder mundial em trabalho part-time (50% da força). Direitos <strong>100% proporcionais</strong> às horas. Férias, pensão e seguro — tudo por hora. Sem distinção legal entre part e full-time.</p>
+      </div>
+      <div style="background:#f0ede7;padding:2rem;border-radius:8px;">
+        <div style="font-size:2rem;margin-bottom:0.5rem;">🇩🇪</div>
+        <h3 style="color:var(--ink);margin:0 0 0.75rem;">Alemanha</h3>
+        <p style="font-size:0.9rem;margin:0;">Salário mínimo por hora (€12,82/h em 2026). Mini-jobs até €556/mês com contribuição social simplificada. Proteção proporcional garantida por lei.</p>
+      </div>
+    </div>
+
+    <p>O que esses países têm em comum: <strong>a hora é a unidade base</strong>, direitos são proporcionais, e ninguém fica sem proteção por trabalhar "pouco" ou em múltiplos lugares.</p>
+
+    <hr>
+
+    <h2>Simulação: como fica na prática</h2>
+
+    <div style="background:var(--ink);color:var(--paper);padding:2.5rem;border-radius:12px;margin:2rem 0;">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.15em;color:rgba(244,241,235,0.4);margin-bottom:1.5rem;">SIMULAÇÃO — SALÁRIO MÍNIMO 2026: R$ 1.621</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;">
+        <div>
+          <p style="font-size:2.5rem;font-weight:800;color:#e8290b;margin:0;">R$ 7,37</p>
+          <p style="font-size:0.85rem;color:rgba(244,241,235,0.5);margin:0;">SMH base (÷220h)</p>
+        </div>
+        <div>
+          <p style="font-size:2.5rem;font-weight:800;color:#0a6e5c;margin:0;">R$ 14,74</p>
+          <p style="font-size:0.85rem;color:rgba(244,241,235,0.5);margin:0;">Domingo/feriado (200%)</p>
+        </div>
+        <div>
+          <p style="font-size:2.5rem;font-weight:800;color:#d4a012;margin:0;">R$ 11,06</p>
+          <p style="font-size:0.85rem;color:rgba(244,241,235,0.5);margin:0;">Noturno (+50%)</p>
+        </div>
+      </div>
+
+      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);">
+        <p style="font-size:0.9rem;color:rgba(244,241,235,0.7);margin:0 0 0.5rem;"><strong style="color:var(--paper);">Motoboy, 10h/dia, 6 dias:</strong></p>
+        <p style="font-size:0.85rem;color:rgba(244,241,235,0.5);margin:0;">5 dias × 10h × R$7,37 = R$368,50 + 1 domingo × 10h × R$14,74 = R$147,40</p>
+        <p style="font-size:1.2rem;font-weight:700;color:var(--paper);margin:0.5rem 0 0;"><strong>Semana: R$ 515,90</strong> + FGTS + férias + seguro acumulando automaticamente</p>
+      </div>
+    </div>
+
+    <div style="background:#f0ede7;padding:2.5rem;border-radius:12px;margin:2rem 0;">
+      <p style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.15em;color:var(--muted);margin-bottom:1.5rem;">COMPARATIVO — TRABALHADOR PADRÃO (22 DIAS/MÊS, 8H/DIA)</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div>
+          <p style="font-weight:700;margin:0 0 0.5rem;">CLT Atual</p>
+          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Salário: R$ 1.621/mês</p>
+          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Férias: 30 dias após 12 meses</p>
+          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Demitido no 5º mês: perde férias</p>
+        </div>
+        <div>
+          <p style="font-weight:700;color:var(--teal);margin:0 0 0.5rem;">CLT 2.0</p>
+          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Salário: R$ 1.621/mês (equivalente)</p>
+          <p style="font-size:0.9rem;color:var(--muted);margin:0;">Férias: ~9 dias acumulados em 5 meses</p>
+          <p style="font-size:0.9rem;color:var(--teal);font-weight:600;margin:0;">Demitido no 5º mês: leva tudo</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
     <blockquote>Autonomia com consequência, não tutela com proibição.</blockquote>
     <p>A CLT atual assume que o trabalhador não é capaz de decidir sobre sua própria vida. A CLT 2.0 assume que ele é adulto — e garante que cada decisão dele gere proteção proporcional.</p>
     <p>O Estado não desaparece. Ele muda de papel: de tutor para garantidor.</p>
