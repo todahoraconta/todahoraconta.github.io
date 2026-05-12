@@ -1,0 +1,115 @@
+# Acabar com a 6x1 pra colocar 5x2 é trocar de coleira.
+
+Você tá comemorando o fim da escala 6x1?
+
+Parabéns. Agora você vai trabalhar 5 dias em vez de 6. Mesma lógica. Mesmo sistema. Mesmo patrão decidindo sua vida.
+
+**Isso não é liberdade. É uma coleira mais confortável.**
+
+---
+
+## O problema nunca foi o número de dias.
+
+O problema é que o sistema inteiro trata você como peça de engrenagem. Você não escolhe quando trabalha. Não sabe quanto vale sua hora. E se for mandado embora no quinto mês, perde tudo.
+
+Isso é proteção? Isso é direito?
+
+---
+
+## E se existisse um modelo onde:
+
+→ Você escolhe quando trabalha
+→ Cada hora sua gera dinheiro NA HORA
+→ Cada hora gera FGTS, férias e seguro automaticamente
+→ Domingo paga o DOBRO
+→ Madrugada paga +50%
+→ Você pode ter 2, 3, 5 empregos — todos formais
+→ Ninguém te obriga a nada
+
+**Parece utopia? Não é. É matemática. Se chama CLT 2.0.**
+
+---
+
+## Como funciona na prática:
+
+**Salário mínimo por hora: R$ 7,37.**
+
+Trabalhou 8 horas numa segunda? Ganhou R$ 58,96 + FGTS + férias + seguro.
+
+Trabalhou domingo? **R$ 14,74 por hora. O dobro.**
+
+Trabalhou 5 meses e saiu? **Leva TUDO que acumulou.** Cada dia contou.
+
+Na CLT atual, se você sai antes de 12 meses, perde férias.
+Na CLT 2.0, você acumula desde a primeira hora.
+
+---
+
+## "Mas e o patrão?"
+
+O patrão TAMBÉM ganha.
+
+Hoje ele não sabe quanto custa um funcionário de verdade. Passivo trabalhista, processo, multa, surpresa.
+
+Na CLT 2.0: **custo fixo por hora. Uma conta. Sem passivo. Sem medo de contratar.**
+
+Sabe o que acontece quando o patrão não tem medo? Ele contrata MAIS.
+
+---
+
+## "Mas isso já existe em algum lugar?"
+
+🇦🇺 **Austrália:** trabalhador casual ganha +25% por hora como compensação. Direitos proporcionais.
+
+🇯🇵 **Japão:** salário mínimo por hora. Part-timers protegidos por lei.
+
+🇳🇱 **Holanda:** 50% da força trabalha part-time. Direitos 100% proporcionais.
+
+🇩🇪 **Alemanha:** salário mínimo por hora. Mini-jobs com proteção.
+
+**Não é invenção. É o que o mundo já faz.**
+
+---
+
+## O motoboy que roda 10h por dia pra 3 apps:
+
+**Hoje:** R$ 2.500/mês. Zero FGTS. Zero férias. Zero seguro. Acidentou? Problema dele.
+
+**CLT 2.0:** R$ 2.800/mês (domingo = dobro) + FGTS acumulando + férias acumulando + INSS desde a primeira hora.
+
+Mesmo trabalho. **Proteção real.**
+
+---
+
+## A diarista que trabalha em 4 casas:
+
+**Hoje:** R$ 1.200/mês. Sem vínculo. Sem direito. Ficou doente? Sem renda.
+
+**CLT 2.0:** R$ 1.200/mês. 4 vínculos formais. FGTS em cada casa. Férias acumulando. INSS cobrindo.
+
+Mesmo salário. **Dignidade total.**
+
+---
+
+## O que o Congresso te oferece:
+
+Trocar 6 dias por 5. Mesma lógica de 1943. Mesma CLT que ignora 40 milhões de informais.
+
+## O que a CLT 2.0 oferece:
+
+**Acabar com a lógica inteira. Cada hora vale. Você decide. Proteção real pra todo mundo.**
+
+---
+
+## Não é de esquerda. Não é de direita. É de quem trabalha.
+
+> Descanso é um direito. Trabalhar também.
+> O erro é transformar qualquer um dos dois em obrigação.
+
+---
+
+**Quer saber mais?** [todahoraconta.com](https://todahoraconta.com)
+
+**Cada hora conta. Cada hora vale.**
+
+#TodaHoraConta #CLT20 #escala6x1 #FimDa6x1
