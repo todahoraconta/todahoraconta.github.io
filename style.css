@@ -52,6 +52,8 @@ nav {
 
 .nav-logo .dot { color: var(--red); }
 
+.nav-links { display: flex; gap: 0.75rem; }
+
 .nav-cta {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.7rem;
