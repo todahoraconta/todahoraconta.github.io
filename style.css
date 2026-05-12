@@ -319,6 +319,43 @@ nav {
   line-height: 1.7;
 }
 
+.pilar-detail {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.pilar-detail summary {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  transition: 0.3s;
+}
+
+.pilar-detail summary:hover { color: var(--ink); }
+.pilar-detail summary::-webkit-details-marker { display: none; }
+
+.pilar-explain {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: rgba(10,110,92,0.04);
+  border-radius: 8px;
+  border-left: 3px solid var(--teal);
+}
+
+.pilar-explain p {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.pilar-explain p:last-child { margin-bottom: 0; }
+
 /* QUOTE */
 .quote-section {
   padding: 7rem 2.5rem;
