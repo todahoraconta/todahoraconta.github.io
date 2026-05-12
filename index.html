@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toda Hora Conta — CLT 2.0</title>
+  <meta name="description" content="E se cada hora trabalhada gerasse dinheiro + direitos? Sem imposição. Sem hipocrisia. Com liberdade, proporcionalidade e justiça.">
+  <meta property="og:title" content="Toda Hora Conta — CLT 2.0">
+  <meta property="og:description" content="O problema não é quantos dias você trabalha. É que cada hora precisa valer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul: #0D7377;
+      --azul-dark: #095355;
+      --laranja: #F26522;
+      --verde: #7BC74D;
+      --bg: #0A0A0F;
+      --bg2: #12121A;
+      --text: #F0F0F5;
+      --text-muted: #8A8A9A;
+      --glow: rgba(13, 115, 119, 0.3);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 50%, rgba(13, 115, 119, 0.15) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 80%, rgba(242, 101, 34, 0.08) 0%, transparent 40%);
+      animation: drift 20s ease-in-out infinite;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(2%, -1%) rotate(1deg); }
+      66% { transform: translate(-1%, 2%) rotate(-1deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5.5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--azul), var(--verde));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--azul);
+      color: white;
+      text-decoration: none;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 30px var(--glow);
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 50px var(--glow), 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 6rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--azul);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+    }
+
+    section h2 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    section p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 650px;
+    }
+
+    /* QUEBRA */
+    .quebra {
+      background: var(--bg2);
+      border-left: 4px solid var(--laranja);
+      padding: 3rem;
+      border-radius: 0 12px 12px 0;
+      margin: 3rem 0;
+    }
+
+    .quebra p {
+      font-size: 1.4rem;
+      color: var(--text);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .quebra .big {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--laranja);
+      margin-bottom: 0.5rem;
+    }
+
+    /* PILARES */
+    .pilares {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .pilar {
+      background: var(--bg2);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .pilar:hover {
+      border-color: var(--azul);
+      box-shadow: 0 0 30px var(--glow);
+      transform: translateY(-4px);
+    }
+
+    .pilar-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .pilar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .pilar p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* COMPARATIVO */
+    .comparativo {
+      width: 100%;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+
+    .comparativo table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    .comparativo th {
+      text-align: left;
+      padding: 1rem;
+      border-bottom: 2px solid var(--azul);
+      font-weight: 700;
+      color: var(--azul);
+    }
+
+    .comparativo td {
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      color: var(--text-muted);
+    }
+
+    .comparativo tr td:last-child {
+      color: var(--verde);
+      font-weight: 700;
+    }
+
+    /* FRASES */
+    .frase-destaque {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
+      text-align: center;
+      padding: 4rem 2rem;
+      line-height: 1.3;
+      color: var(--text);
+    }
+
+    .frase-destaque span {
+      color: var(--laranja);
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    }
+
+    .cta-final h2 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .cta-final p {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      margin: 0 auto 2.5rem;
+      max-width: 500px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .social-links a {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 40px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      border-color: var(--azul);
+      background: rgba(13, 115, 119, 0.1);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      section { padding: 4rem 1.5rem; }
+      .quebra { padding: 2rem 1.5rem; }
+      .pilares { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content fade-in">
+      <h1>Toda hora trabalhada<br>deveria <span class="highlight">valer.</span></h1>
+      <p class="subtitle">Sem imposição. Sem hipocrisia.<br>Com liberdade, proporcionalidade e justiça.</p>
+      <a href="#entenda" class="cta-btn">Entenda a CLT 2.0</a>
+    </div>
+    <div class="scroll-hint">↓ role para entender</div>
+  </div>
+
+  <!-- QUEBRA DO DEBATE -->
+  <section id="entenda" class="fade-in">
+    <div class="section-label">O debate errado</div>
+    <h2>O Brasil discute se a escala deve ser 6x1 ou 5x2.</h2>
+    <p>E se a pergunta estivesse errada?</p>
+    <div class="quebra">
+      <p class="big">O problema não é quantos dias você trabalha.</p>
+      <p>É trabalhar sem que cada hora gere dinheiro e direitos proporcionalmente.</p>
+    </div>
+  </section>
+
+  <!-- PILARES -->
+  <section class="fade-in">
+    <div class="section-label">A ideia central</div>
+    <h2>Três princípios. Zero complicação.</h2>
+    <div class="pilares">
+      <div class="pilar">
+        <div class="pilar-icon">⏱️</div>
+        <h3>Toda hora gera dinheiro</h3>
+        <p>Salário mínimo por hora. Sem hora invisível. Sem "ficar até terminar" de graça.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-icon">🛡️</div>
+        <h3>Toda hora gera direitos</h3>
+        <p>FGTS, férias, seguro — tudo proporcional. Trabalhou 1 hora? Acumulou. Trabalhou 10.000? Acumulou mais.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-icon">🌙</div>
+        <h3>Horas difíceis valem mais</h3>
+        <p>Domingo, feriado, madrugada — quem escolhe esses horários é valorizado, não punido.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE -->
+  <div class="frase-destaque fade-in">
+    "Descanso é um direito.<br>Trabalhar também.<br><span>O erro é transformar qualquer um dos dois em obrigação.</span>"
+  </div>
+
+  <!-- LIBERDADE -->
+  <section class="fade-in">
+    <div class="section-label">Liberdade real</div>
+    <h2>Quem decide sua vida é você.</h2>
+    <p>Tem gente que precisa de uma hora a mais hoje pra pagar uma conta. Tem gente que quer concentrar trabalho pra viajar depois. Tem gente que prefere trabalhar de madrugada.</p>
+    <p>Por que a lei decide por elas?</p>
+    <div class="quebra">
+      <p>O direito ao descanso é inviolável.<br>O momento de exercê-lo é decisão do trabalhador.</p>
+    </div>
+  </section>
+
+  <!-- COMPARATIVO -->
+  <section class="fade-in">
+    <div class="section-label">Na prática</div>
+    <h2>O que muda?</h2>
+    <div class="comparativo">
+      <table>
+        <tr><th>Aspecto</th><th>CLT Atual</th><th>CLT 2.0</th></tr>
+        <tr><td>Unidade base</td><td>Mês</td><td>Hora</td></tr>
+        <tr><td>Escala</td><td>Engessada (6x1 ou 5x2)</td><td>Livre</td></tr>
+        <tr><td>Férias</td><td>30 dias fixos/ano</td><td>~22 dias úteis, acumulativas</td></tr>
+        <tr><td>Múltiplos empregos</td><td>Restrito</td><td>Livre, com proteção</td></tr>
+        <tr><td>Custo ao empregador</td><td>Imprevisível</td><td>Fixo por hora, sem passivo</td></tr>
+        <tr><td>Seguro-desemprego</td><td>Tudo ou nada</td><td>Proporcional</td></tr>
+        <tr><td>Informalidade</td><td>Ignora</td><td>Resolve</td></tr>
+        <tr><td>Gig economy</td><td>Ignora</td><td>Compatível</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- QUEM GANHA -->
+  <section class="fade-in">
+    <div class="section-label">Pra quem é</div>
+    <h2>Não é contra ninguém. É a favor de clareza.</h2>
+    <div class="pilares">
+      <div class="pilar">
+        <div class="pilar-icon">👷</div>
+        <h3>Trabalhador</h3>
+        <p>Sabe exatamente quanto ganha. Cada hora vale. Férias nunca somem. Liberdade de escolha.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-icon">🏢</div>
+        <h3>Empregador</h3>
+        <p>Custo previsível. Sem passivo oculto. Sem surpresas na Justiça do Trabalho.</p>
+      </div>
+      <div class="pilar">
+        <div class="pilar-icon">🏛️</div>
+        <h3>Sociedade</h3>
+        <p>Menos informalidade. Menos fraude. Mais gente protegida. Mais gente contribuindo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASE 2 -->
+  <div class="frase-destaque fade-in">
+    "O maior risco é <span>fingir proteção</span> onde ela não existe."
+  </div>
+
+  <!-- MOTOBOY -->
+  <section class="fade-in">
+    <div class="section-label">Exemplo real</div>
+    <h2>O motoboy que trabalha pra 3 apps.</h2>
+    <p>Hoje: sem FGTS, sem férias, sem seguro. Trabalha 12 horas e não acumula nada.</p>
+    <p>Na CLT 2.0: cada hora dele gera proteção. Automaticamente. Sem precisar de carteira assinada "tradicional".</p>
+    <p style="color: var(--verde); font-weight: 700;">Isso é proteção real, não proteção de papel.</p>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta-final fade-in">
+    <h2>Isso não é uma proposta fechada.</h2>
+    <p>É um convite ao debate. Faz sentido pra você?</p>
+    <a href="#" class="cta-btn" style="margin-bottom: 1rem;">Leia a proposta completa</a>
+    <div class="social-links">
+      <a href="#">𝕏 Twitter</a>
+      <a href="#">📸 Instagram</a>
+      <a href="#">🎵 TikTok</a>
+      <a href="#">💼 LinkedIn</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>Toda Hora Conta © 2026 — Um convite ao debate sobre o futuro do trabalho no Brasil.</p>
+    <p style="margin-top: 0.5rem;">#TodaHoraConta #CLT20</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
