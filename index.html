@@ -4,488 +4,705 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Toda Hora Conta — CLT 2.0</title>
-  <meta name="description" content="E se cada hora trabalhada gerasse dinheiro + direitos? Sem imposição. Sem hipocrisia. Com liberdade, proporcionalidade e justiça.">
+  <meta name="description" content="E se cada hora trabalhada gerasse dinheiro + direitos? O problema não é quantos dias. É que cada hora precisa valer.">
   <meta property="og:title" content="Toda Hora Conta — CLT 2.0">
   <meta property="og:description" content="O problema não é quantos dias você trabalha. É que cada hora precisa valer.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Instrument+Serif&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul: #0D7377;
-      --azul-dark: #095355;
-      --laranja: #F26522;
-      --verde: #7BC74D;
-      --bg: #0A0A0F;
-      --bg2: #12121A;
-      --text: #F0F0F5;
-      --text-muted: #8A8A9A;
-      --glow: rgba(13, 115, 119, 0.3);
+      --ink: #0b0b0f;
+      --paper: #f4f1eb;
+      --accent: #e63b12;
+      --teal: #0a6e5c;
+      --gold: #c9a227;
+      --muted: #6b6860;
+      --line: rgba(11,11,15,0.08);
+      --radius: 2px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      font-family: 'Outfit', sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
       overflow-x: hidden;
-      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* HERO */
+    /* === GRAIN OVERLAY === */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      z-index: 9999;
+    }
+
+    /* === NAVIGATION === */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      mix-blend-mode: difference;
+    }
+
+    .nav-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    .nav-cta {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: white;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 0.5rem 1.25rem;
+      border-radius: 100px;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover { background: white; color: black; mix-blend-mode: normal; }
+
+    /* === HERO === */
     .hero {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
+      padding: 8rem 2rem 4rem;
       position: relative;
+      background: var(--ink);
+      color: var(--paper);
       overflow: hidden;
     }
 
     .hero::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(ellipse at 30% 50%, rgba(13, 115, 119, 0.15) 0%, transparent 50%),
-                  radial-gradient(ellipse at 70% 80%, rgba(242, 101, 34, 0.08) 0%, transparent 40%);
-      animation: drift 20s ease-in-out infinite;
+      top: 10%;
+      right: -10%;
+      width: 60vw;
+      height: 60vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(230,59,18,0.12) 0%, transparent 70%);
+      filter: blur(80px);
     }
 
-    @keyframes drift {
-      0%, 100% { transform: translate(0, 0) rotate(0deg); }
-      33% { transform: translate(2%, -1%) rotate(1deg); }
-      66% { transform: translate(-1%, 2%) rotate(-1deg); }
-    }
-
-    .hero-content {
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
       position: relative;
-      z-index: 1;
-      max-width: 800px;
+    }
+
+    .hero-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .hero-tag::before {
+      content: '';
+      width: 2rem;
+      height: 1px;
+      background: var(--accent);
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 8vw, 5.5rem);
-      font-weight: 900;
-      line-height: 1.05;
-      margin-bottom: 1.5rem;
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(3rem, 9vw, 7.5rem);
+      font-weight: 400;
+      line-height: 0.95;
       letter-spacing: -0.03em;
-    }
-
-    .hero h1 .highlight {
-      background: linear-gradient(135deg, var(--azul), var(--verde));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .hero .subtitle {
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      color: var(--text-muted);
       margin-bottom: 2.5rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 480px;
+      color: rgba(244,241,235,0.6);
       font-weight: 300;
     }
 
-    .cta-btn {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: var(--azul);
-      color: white;
-      text-decoration: none;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 30px var(--glow);
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 50px var(--glow), 0 10px 40px rgba(0,0,0,0.3);
-    }
-
-    .scroll-hint {
+    .hero-scroll {
       position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--text-muted);
-      font-size: 0.85rem;
-      animation: bounce 2s infinite;
+      bottom: 3rem;
+      right: 2rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(244,241,235,0.3);
+      writing-mode: vertical-rl;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(8px); }
+    /* === MANIFESTO === */
+    .manifesto {
+      padding: 8rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    /* SECTIONS */
-    section {
+    .manifesto-q {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.35;
+      margin-bottom: 2rem;
+      color: var(--ink);
+    }
+
+    .manifesto-a {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--muted);
+      padding-left: 2rem;
+      border-left: 2px solid var(--accent);
+    }
+
+    /* === COUNTER === */
+    .counter-section {
       padding: 6rem 2rem;
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+    }
+
+    .counter-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .counter-item .number {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .counter-item .label {
+      font-size: 0.85rem;
+      color: rgba(244,241,235,0.5);
+      line-height: 1.4;
+    }
+
+    /* === PILARES === */
+    .pilares-section {
+      padding: 8rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pilares-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .pilares-header h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 400;
+      max-width: 500px;
+      line-height: 1.1;
+    }
+
+    .pilares-header p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 300px;
+    }
+
+    .pilares-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .pilar-card {
+      background: var(--paper);
+      padding: 2.5rem;
+      position: relative;
+      transition: background 0.4s;
+    }
+
+    .pilar-card:hover { background: #ece9e1; }
+
+    .pilar-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .pilar-card h3 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .pilar-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* === QUOTE === */
+    .quote-section {
+      padding: 8rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .quote-section blockquote {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+      line-height: 1.3;
+      max-width: 800px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    .quote-section blockquote span { color: var(--accent); }
+
+    /* === COMPARATIVO === */
+    .compare-section {
+      padding: 8rem 2rem;
       max-width: 900px;
       margin: 0 auto;
     }
 
-    .section-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
-      color: var(--azul);
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-bottom: 1rem;
-    }
-
-    section h2 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 900;
-      line-height: 1.15;
-      margin-bottom: 1.5rem;
-      letter-spacing: -0.02em;
-    }
-
-    section p {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      max-width: 650px;
-    }
-
-    /* QUEBRA */
-    .quebra {
-      background: var(--bg2);
-      border-left: 4px solid var(--laranja);
-      padding: 3rem;
-      border-radius: 0 12px 12px 0;
-      margin: 3rem 0;
-    }
-
-    .quebra p {
-      font-size: 1.4rem;
-      color: var(--text);
+    .compare-section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 400;
-      line-height: 1.5;
+      margin-bottom: 3rem;
     }
 
-    .quebra .big {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--laranja);
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .compare-table th {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 1rem 1.25rem;
+      border-bottom: 2px solid var(--ink);
+      color: var(--muted);
+    }
+
+    .compare-table th:last-child { color: var(--teal); }
+
+    .compare-table td {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.9rem;
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    .compare-table td:first-child {
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .compare-table td:last-child {
+      color: var(--teal);
+      font-weight: 500;
+    }
+
+    /* === STORIES === */
+    .stories-section {
+      padding: 8rem 2rem;
+      background: #0d1a17;
+      color: var(--paper);
+    }
+
+    .stories-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .stories-section .section-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 2rem;
+    }
+
+    .stories-section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+    }
+
+    .story-block {
+      margin-bottom: 2.5rem;
+      padding-left: 1.5rem;
+      border-left: 1px solid rgba(10,110,92,0.4);
+    }
+
+    .story-block .before {
+      color: rgba(244,241,235,0.4);
+      font-size: 0.95rem;
       margin-bottom: 0.5rem;
     }
 
-    /* PILARES */
-    .pilares {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin: 3rem 0;
+    .story-block .after {
+      color: var(--paper);
+      font-size: 1.05rem;
+      font-weight: 500;
     }
 
-    .pilar {
-      background: var(--bg2);
-      border: 1px solid rgba(255,255,255,0.05);
-      border-radius: 16px;
-      padding: 2rem;
-      transition: all 0.3s ease;
+    .story-block .after em {
+      color: var(--teal);
+      font-style: normal;
     }
 
-    .pilar:hover {
-      border-color: var(--azul);
-      box-shadow: 0 0 30px var(--glow);
-      transform: translateY(-4px);
-    }
-
-    .pilar-icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .pilar h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.75rem;
-      font-weight: 700;
-    }
-
-    .pilar p {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    /* COMPARATIVO */
-    .comparativo {
-      width: 100%;
-      overflow-x: auto;
-      margin: 2rem 0;
-    }
-
-    .comparativo table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.95rem;
-    }
-
-    .comparativo th {
-      text-align: left;
-      padding: 1rem;
-      border-bottom: 2px solid var(--azul);
-      font-weight: 700;
-      color: var(--azul);
-    }
-
-    .comparativo td {
-      padding: 0.85rem 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      color: var(--text-muted);
-    }
-
-    .comparativo tr td:last-child {
-      color: var(--verde);
-      font-weight: 700;
-    }
-
-    /* FRASES */
-    .frase-destaque {
-      font-size: clamp(1.5rem, 4vw, 2.2rem);
-      font-weight: 700;
+    /* === CTA === */
+    .cta-section {
+      padding: 10rem 2rem;
       text-align: center;
-      padding: 4rem 2rem;
-      line-height: 1.3;
-      color: var(--text);
+      position: relative;
     }
 
-    .frase-destaque span {
-      color: var(--laranja);
+    .cta-section h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
     }
 
-    /* CTA FINAL */
-    .cta-final {
-      text-align: center;
-      padding: 6rem 2rem;
-      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
+    .cta-section p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
     }
 
-    .cta-final h2 {
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 1rem;
-    }
-
-    .cta-final p {
-      color: var(--text-muted);
-      font-size: 1.2rem;
-      margin: 0 auto 2.5rem;
-      max-width: 500px;
-    }
-
-    .social-links {
+    .cta-buttons {
       display: flex;
       gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
-      margin-top: 2rem;
     }
 
-    .social-links a {
-      padding: 0.75rem 1.5rem;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 40px;
-      color: var(--text);
+    .btn-primary {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--ink);
+      color: var(--paper);
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      border-radius: 100px;
+      transition: all 0.3s;
     }
 
-    .social-links a:hover {
-      border-color: var(--azul);
-      background: rgba(13, 115, 119, 0.1);
+    .btn-primary:hover { transform: scale(1.03); box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: transparent;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      transition: all 0.3s;
     }
 
-    /* FOOTER */
+    .btn-secondary:hover { border-color: var(--ink); }
+
+    /* === SOCIAL === */
+    .social-bar {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .social-bar a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-bar a:hover { color: var(--ink); }
+
+    /* === FOOTER === */
     footer {
-      text-align: center;
       padding: 2rem;
-      color: var(--text-muted);
-      font-size: 0.8rem;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
     }
 
-    /* ANIMATIONS */
-    .fade-in {
+    /* === ANIMATIONS === */
+    .reveal {
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .fade-in.visible {
+    .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      section { padding: 4rem 1.5rem; }
-      .quebra { padding: 2rem 1.5rem; }
-      .pilares { grid-template-columns: 1fr; }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .counter-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .pilares-grid { grid-template-columns: 1fr; }
+      .hero { padding: 6rem 1.5rem 3rem; }
+      .hero-scroll { display: none; }
+      nav { padding: 1rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-content fade-in">
-      <h1>Toda hora trabalhada<br>deveria <span class="highlight">valer.</span></h1>
-      <p class="subtitle">Sem imposição. Sem hipocrisia.<br>Com liberdade, proporcionalidade e justiça.</p>
-      <a href="#entenda" class="cta-btn">Entenda a CLT 2.0</a>
-    </div>
-    <div class="scroll-hint">↓ role para entender</div>
-  </div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Toda Hora Conta</div>
+    <a href="#proposta" class="nav-cta">Ler proposta</a>
+  </nav>
 
-  <!-- QUEBRA DO DEBATE -->
-  <section id="entenda" class="fade-in">
-    <div class="section-label">O debate errado</div>
-    <h2>O Brasil discute se a escala deve ser 6x1 ou 5x2.</h2>
-    <p>E se a pergunta estivesse errada?</p>
-    <div class="quebra">
-      <p class="big">O problema não é quantos dias você trabalha.</p>
-      <p>É trabalhar sem que cada hora gere dinheiro e direitos proporcionalmente.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">CLT 2.0</div>
+      <h1 class="reveal">Toda hora<br>trabalhada<br>deveria <em>valer.</em></h1>
+      <p class="hero-sub reveal reveal-delay-1">O problema não é quantos dias você trabalha. É trabalhar sem que cada hora gere dinheiro e direitos proporcionalmente.</p>
+    </div>
+    <div class="hero-scroll">Scroll</div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="manifesto">
+    <p class="manifesto-q reveal">O Brasil discute se a escala deve ser 6×1 ou 5×2. E se a pergunta estivesse errada?</p>
+    <p class="manifesto-a reveal reveal-delay-1">Trocar o número de dias não muda a lógica. É como trocar a cor da parede de uma casa com a fundação rachada. O que precisa mudar é o princípio: cada hora trabalhada precisa valer — em dinheiro e em direitos.</p>
+  </section>
+
+  <!-- NÚMEROS -->
+  <section class="counter-section">
+    <div class="counter-grid">
+      <div class="counter-item reveal">
+        <div class="number">40M</div>
+        <div class="label">de brasileiros trabalham<br>na informalidade</div>
+      </div>
+      <div class="counter-item reveal reveal-delay-1">
+        <div class="number">14M</div>
+        <div class="label">estão presos<br>na escala 6×1</div>
+      </div>
+      <div class="counter-item reveal reveal-delay-2">
+        <div class="number">500K</div>
+        <div class="label">afastamentos por doenças<br>do trabalho em 2024</div>
+      </div>
     </div>
   </section>
 
   <!-- PILARES -->
-  <section class="fade-in">
-    <div class="section-label">A ideia central</div>
-    <h2>Três princípios. Zero complicação.</h2>
-    <div class="pilares">
-      <div class="pilar">
-        <div class="pilar-icon">⏱️</div>
-        <h3>Toda hora gera dinheiro</h3>
-        <p>Salário mínimo por hora. Sem hora invisível. Sem "ficar até terminar" de graça.</p>
+  <section class="pilares-section" id="proposta">
+    <div class="pilares-header">
+      <h2 class="reveal">O que a CLT 2.0 propõe</h2>
+      <p class="reveal reveal-delay-1">Não é contra ninguém. É a favor de clareza, proporcionalidade e liberdade real.</p>
+    </div>
+    <div class="pilares-grid">
+      <div class="pilar-card reveal">
+        <div class="pilar-num">01</div>
+        <h3>Salário mínimo por hora</h3>
+        <p>Toda hora vale. Sem hora invisível. Sem "ficar até terminar" de graça. O trabalhador sabe exatamente quanto ganha.</p>
       </div>
-      <div class="pilar">
-        <div class="pilar-icon">🛡️</div>
-        <h3>Toda hora gera direitos</h3>
-        <p>FGTS, férias, seguro — tudo proporcional. Trabalhou 1 hora? Acumulou. Trabalhou 10.000? Acumulou mais.</p>
+      <div class="pilar-card reveal reveal-delay-1">
+        <div class="pilar-num">02</div>
+        <h3>Direitos proporcionais</h3>
+        <p>FGTS, férias, seguro — tudo acumula a cada hora. Trabalhou 1 hora? Acumulou. 10.000 horas? Proporcionalmente mais.</p>
       </div>
-      <div class="pilar">
-        <div class="pilar-icon">🌙</div>
+      <div class="pilar-card reveal reveal-delay-2">
+        <div class="pilar-num">03</div>
         <h3>Horas difíceis valem mais</h3>
-        <p>Domingo, feriado, madrugada — quem escolhe esses horários é valorizado, não punido.</p>
+        <p>Domingo, feriado, madrugada. Quem escolhe esses horários é valorizado com 200% do mínimo. Não é punição — é oportunidade.</p>
+      </div>
+      <div class="pilar-card reveal">
+        <div class="pilar-num">04</div>
+        <h3>Férias que nunca somem</h3>
+        <p>A cada 12 dias trabalhados, 1 dia de férias. Acumulativas. Agendamento livre. O dinheiro rende num fundo seu.</p>
+      </div>
+      <div class="pilar-card reveal reveal-delay-1">
+        <div class="pilar-num">05</div>
+        <h3>Múltiplos vínculos</h3>
+        <p>Trabalhe em mais de um lugar se quiser. Cada vínculo gera proteção. Diaristas, motoboys, professores — todos cobertos.</p>
+      </div>
+      <div class="pilar-card reveal reveal-delay-2">
+        <div class="pilar-num">06</div>
+        <h3>Custo claro ao empregador</h3>
+        <p>Uma conta só. Sem passivo oculto. Sem surpresa na Justiça. Previsibilidade total — bom pra quem contrata e pra quem trabalha.</p>
       </div>
     </div>
   </section>
 
-  <!-- FRASE -->
-  <div class="frase-destaque fade-in">
-    "Descanso é um direito.<br>Trabalhar também.<br><span>O erro é transformar qualquer um dos dois em obrigação.</span>"
-  </div>
-
-  <!-- LIBERDADE -->
-  <section class="fade-in">
-    <div class="section-label">Liberdade real</div>
-    <h2>Quem decide sua vida é você.</h2>
-    <p>Tem gente que precisa de uma hora a mais hoje pra pagar uma conta. Tem gente que quer concentrar trabalho pra viajar depois. Tem gente que prefere trabalhar de madrugada.</p>
-    <p>Por que a lei decide por elas?</p>
-    <div class="quebra">
-      <p>O direito ao descanso é inviolável.<br>O momento de exercê-lo é decisão do trabalhador.</p>
-    </div>
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <blockquote class="reveal">
+      "Descanso é um direito. Trabalhar também. <span>O erro é transformar qualquer um dos dois em obrigação.</span>"
+    </blockquote>
   </section>
 
   <!-- COMPARATIVO -->
-  <section class="fade-in">
-    <div class="section-label">Na prática</div>
-    <h2>O que muda?</h2>
-    <div class="comparativo">
-      <table>
-        <tr><th>Aspecto</th><th>CLT Atual</th><th>CLT 2.0</th></tr>
+  <section class="compare-section">
+    <h2 class="reveal">Na prática, o que muda</h2>
+    <table class="compare-table reveal reveal-delay-1">
+      <thead>
+        <tr>
+          <th>Aspecto</th>
+          <th>CLT Atual</th>
+          <th>CLT 2.0</th>
+        </tr>
+      </thead>
+      <tbody>
         <tr><td>Unidade base</td><td>Mês</td><td>Hora</td></tr>
-        <tr><td>Escala</td><td>Engessada (6x1 ou 5x2)</td><td>Livre</td></tr>
+        <tr><td>Escala</td><td>Engessada</td><td>Livre</td></tr>
         <tr><td>Férias</td><td>30 dias fixos/ano</td><td>~22 dias úteis, acumulativas</td></tr>
         <tr><td>Múltiplos empregos</td><td>Restrito</td><td>Livre, com proteção</td></tr>
-        <tr><td>Custo ao empregador</td><td>Imprevisível</td><td>Fixo por hora, sem passivo</td></tr>
+        <tr><td>Custo empregador</td><td>Imprevisível (passivo)</td><td>Fixo por hora, sem passivo</td></tr>
         <tr><td>Seguro-desemprego</td><td>Tudo ou nada</td><td>Proporcional</td></tr>
-        <tr><td>Informalidade</td><td>Ignora</td><td>Resolve</td></tr>
         <tr><td>Gig economy</td><td>Ignora</td><td>Compatível</td></tr>
-      </table>
+        <tr><td>Informalidade</td><td>Não resolve</td><td>Resolve</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- STORIES -->
+  <section class="stories-section">
+    <div class="stories-inner">
+      <div class="section-tag">Na vida real</div>
+      <h2 class="reveal">Quem ganha com isso?</h2>
+
+      <div class="story-block reveal">
+        <p class="before">O motoboy que trabalha pra 3 apps sem proteção nenhuma.</p>
+        <p class="after">Na CLT 2.0, <em>cada hora dele gera FGTS, férias e seguro</em>. Automaticamente.</p>
+      </div>
+
+      <div class="story-block reveal">
+        <p class="before">A diarista que trabalha em 4 casas e não tem direito a nada.</p>
+        <p class="after">Na CLT 2.0, <em>cada hora em cada casa acumula proteção</em>. Sem burocracia.</p>
+      </div>
+
+      <div class="story-block reveal">
+        <p class="before">O jovem que quer trabalhar no fim de semana pra juntar dinheiro.</p>
+        <p class="after">Na CLT 2.0, <em>ele ganha 200% e acumula férias em dobro</em>. Por escolha.</p>
+      </div>
+
+      <div class="story-block reveal">
+        <p class="before">O pequeno empresário que tem medo de contratar por causa do passivo.</p>
+        <p class="after">Na CLT 2.0, <em>o custo é fixo por hora, sem surpresas</em>. Previsível.</p>
+      </div>
     </div>
   </section>
 
-  <!-- QUEM GANHA -->
-  <section class="fade-in">
-    <div class="section-label">Pra quem é</div>
-    <h2>Não é contra ninguém. É a favor de clareza.</h2>
-    <div class="pilares">
-      <div class="pilar">
-        <div class="pilar-icon">👷</div>
-        <h3>Trabalhador</h3>
-        <p>Sabe exatamente quanto ganha. Cada hora vale. Férias nunca somem. Liberdade de escolha.</p>
-      </div>
-      <div class="pilar">
-        <div class="pilar-icon">🏢</div>
-        <h3>Empregador</h3>
-        <p>Custo previsível. Sem passivo oculto. Sem surpresas na Justiça do Trabalho.</p>
-      </div>
-      <div class="pilar">
-        <div class="pilar-icon">🏛️</div>
-        <h3>Sociedade</h3>
-        <p>Menos informalidade. Menos fraude. Mais gente protegida. Mais gente contribuindo.</p>
-      </div>
+  <!-- QUOTE 2 -->
+  <section class="quote-section">
+    <blockquote class="reveal">
+      "O maior risco é <span>fingir proteção</span> onde ela não existe."
+    </blockquote>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2 class="reveal">Isso faz sentido<br>pra você?</h2>
+    <p class="reveal reveal-delay-1">Não é uma proposta fechada. É um convite ao debate.</p>
+    <div class="cta-buttons reveal reveal-delay-2">
+      <a href="#proposta" class="btn-primary">Leia a proposta completa</a>
+      <a href="#" class="btn-secondary">Compartilhe a ideia</a>
     </div>
   </section>
 
-  <!-- FRASE 2 -->
-  <div class="frase-destaque fade-in">
-    "O maior risco é <span>fingir proteção</span> onde ela não existe."
+  <!-- SOCIAL -->
+  <div class="social-bar">
+    <a href="#">Twitter / X</a>
+    <a href="#">Instagram</a>
+    <a href="#">TikTok</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">YouTube</a>
   </div>
 
-  <!-- MOTOBOY -->
-  <section class="fade-in">
-    <div class="section-label">Exemplo real</div>
-    <h2>O motoboy que trabalha pra 3 apps.</h2>
-    <p>Hoje: sem FGTS, sem férias, sem seguro. Trabalha 12 horas e não acumula nada.</p>
-    <p>Na CLT 2.0: cada hora dele gera proteção. Automaticamente. Sem precisar de carteira assinada "tradicional".</p>
-    <p style="color: var(--verde); font-weight: 700;">Isso é proteção real, não proteção de papel.</p>
-  </section>
-
-  <!-- CTA FINAL -->
-  <div class="cta-final fade-in">
-    <h2>Isso não é uma proposta fechada.</h2>
-    <p>É um convite ao debate. Faz sentido pra você?</p>
-    <a href="#" class="cta-btn" style="margin-bottom: 1rem;">Leia a proposta completa</a>
-    <div class="social-links">
-      <a href="#">𝕏 Twitter</a>
-      <a href="#">📸 Instagram</a>
-      <a href="#">🎵 TikTok</a>
-      <a href="#">💼 LinkedIn</a>
-    </div>
-  </div>
-
+  <!-- FOOTER -->
   <footer>
-    <p>Toda Hora Conta © 2026 — Um convite ao debate sobre o futuro do trabalho no Brasil.</p>
-    <p style="margin-top: 0.5rem;">#TodaHoraConta #CLT20</p>
+    <p>Toda Hora Conta © 2026 — Um convite ao debate sobre o futuro do trabalho.</p>
+    <p style="margin-top: 0.5rem; color: var(--teal);">#TodaHoraConta #CLT20</p>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
