@@ -1,4 +1,4 @@
-const TWEETS = [
+export const TWEETS = [
   // === ABERTURA / CONCEITO ===
   `E se o problema do trabalho no Brasil não fosse trabalhar demais, mas trabalhar sem que cada hora valha alguma coisa?\n\nToda hora deveria gerar dinheiro + direitos. Sem exceção.\n\n#escala6x1 #FimDa6x1 #TodaHoraConta #CLT20`,
 
@@ -50,32 +50,4 @@ const TWEETS = [
   `Conhece alguém que trabalha informal e não tem proteção nenhuma?\n\nManda esse link pra ela: todahoraconta.com\n\nA CLT 2.0 é pra essas pessoas.\n\n#escala6x1 #TodaHoraConta @clt20`,
 ];
 
-export function getContent() {
-  const hour = new Date().getHours();
-
-  // Only use CTA tweets (with link) once per day at peak (19h BRT = 22h UTC)
-  if (hour === 22) {
-    const day = new Date().getDate();
-    return TWEETS[day % 2 === 0 ? 19 : 20]; // Alternate between the 2 CTAs
-  }
-
-  // Rest of the day: no-link tweets
-  const noLinkTweets = TWEETS.slice(0, 19);
-
-  let pool;
-  if (hour >= 10 && hour <= 12 || hour >= 21 && hour <= 23) {
-    // Peak BRT (7-9h, 18-20h): provocative + data
-    pool = noLinkTweets.filter((_, i) => i < 6 || i >= 9);
-  } else if (hour >= 15 && hour <= 17) {
-    // Lunch BRT (12-14h): human + examples
-    pool = noLinkTweets.filter((_, i) => i >= 3 && i < 12);
-  } else {
-    // Off-peak: philosophical + comparisons
-    pool = noLinkTweets.filter((_, i) => i >= 12);
-  }
-
-  const dayOffset = new Date().getDate() * 7 + hour;
-  const index = dayOffset % pool.length;
-
-  return pool[index];
-}
+export { TWEETS as default };
