@@ -321,13 +321,11 @@ nav {
 
 .pilar-detail {
   margin-top: 1rem;
-  border-top: 1px solid var(--line);
-  padding-top: 0.75rem;
 }
 
 .pilar-detail summary {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.05em;
   color: var(--teal);
   cursor: pointer;
@@ -339,22 +337,40 @@ nav {
 .pilar-detail summary:hover { color: var(--ink); }
 .pilar-detail summary::-webkit-details-marker { display: none; }
 
+.pilar-detail[open] summary { display: none; }
+
+.pilar-detail[open] ~ h3,
+.pilar-detail[open] ~ p,
+.pilar-detail[open] ~ .pilar-n { display: none; }
+
 .pilar-explain {
-  margin-top: 1rem;
-  padding: 1.25rem;
-  background: rgba(10,110,92,0.04);
-  border-radius: 8px;
-  border-left: 3px solid var(--teal);
+  margin-top: 0;
 }
 
 .pilar-explain p {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: #4a4a4a;
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 0.75rem;
 }
 
 .pilar-explain p:last-child { margin-bottom: 0; }
+
+.pilar-explain .close-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.pilar-explain .close-btn:hover { color: var(--ink); }
 
 /* QUOTE */
 .quote-section {
