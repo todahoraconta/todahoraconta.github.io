@@ -19,6 +19,7 @@ O Brasil tem **54 milhões de pessoas** que o sistema trabalhista atual ignora o
 - **40 milhões** trabalham na informalidade total — sem FGTS, sem férias, sem seguro, sem INSS
 - **14 milhões** estão presos na escala 6x1, trabalhando 6 dias pra folgar 1
 - **26 milhões** de celetistas não recebem horas extras mesmo trabalhando além do horário
+- **500 mil** afastamentos por doenças do trabalho só em 2024
 
 O PL do governo resolve pra quem? Pros 14 milhões da 6x1. E os outros 40 milhões? Continuam invisíveis.
 
@@ -26,77 +27,137 @@ A CLT 2.0 resolve pra **todos**. E resolve de verdade.
 
 ---
 
-## As 10 maiores vantagens pro trabalhador
+## As 12 maiores vantagens pro trabalhador
 
-### 1. Você sabe EXATAMENTE quanto ganha
+### 1. Salário líquido, sem surpresa, sem desconto escondido
 
-Chega de salário confuso com desconto que ninguém entende. Na CLT 2.0, o valor que aparece é o valor que cai na sua conta. Líquido. Transparente. Por hora.
+Na CLT atual, seu contracheque é um mistério. Desconto disso, contribuição daquilo, alíquota de não-sei-o-quê. Você nunca sabe quanto vai cair na conta.
 
-### 2. Cada hora gera proteção automática
+Na CLT 2.0, o valor combinado é o valor que você recebe. **Líquido. Transparente. Sem desconto inesperado.** Os encargos existem, mas são custo do empregador — explícitos, separados, e você nunca é surpreendido.
 
-Não importa se você trabalhou 1 hora ou 1.000 horas no mês. Cada uma delas gerou FGTS, férias, seguro-desemprego e INSS proporcionalmente. Sem mínimo. Sem "tudo ou nada".
+### 2. Fim do banco de horas (esse benefício que só beneficia o patrão)
 
-### 3. Demissão nunca mais tira seus direitos
+Banco de horas é uma das maiores farsas da CLT atual. Te vendem como "flexibilidade", mas na prática é o patrão guardando suas horas extras pra te dar folga quando ELE quer — geralmente quando o movimento tá fraco.
 
-Na CLT atual, se você é demitido antes de completar 12 meses, perde férias. Na CLT 2.0, **você leva tudo que acumulou**. Trabalhou 3 meses? Tem 3 meses de direitos. Ponto final.
+Na CLT 2.0, **não existe banco de horas**. Trabalhou? Recebeu. Na hora. Em dinheiro. Cada hora extra é dinheiro a mais na sua conta no mesmo período. Sem "compensação" futura que nunca vem do jeito que você quer.
 
-### 4. Domingo e feriado pagam o DOBRO
+### 3. Cada hora gera proteção automática e completa
 
-Quer trabalhar no domingo? Sua escolha. E ela é recompensada: **200% do valor da hora**. Feriado? Igual. Madrugada? +50%. Quem dá o tempo que ninguém quer dar, ganha mais. Muito mais.
+Não importa se você trabalhou 1 hora ou 1.000 horas no mês. Cada uma delas gerou automaticamente:
 
-Um trabalhador que escolhe fazer 4 domingos no mês ganha **R$ 940 extras** só nesses dias. Isso é quase um salário mínimo inteiro a mais.
+- **FGTS proporcional** — caindo no seu fundo a cada hora
+- **INSS proporcional** — contando pra aposentadoria desde a primeira hora
+- **Férias proporcionais** — acumulando no seu fundo individual
+- **13º proporcional** — diluído em cada hora, sem esperar dezembro
+- **Seguro-desemprego** — acumulando crédito proporcional
+- **Proteção contra acidente** — coberto desde o minuto 1
 
-### 5. Férias que são SUAS de verdade
+Sem mínimo de horas. Sem mínimo de meses. **Trabalhou = protegido.**
 
-Na CLT atual, suas férias são do patrão — ele decide quando você tira. Na CLT 2.0, suas férias acumulam num **fundo individual que rende acima da inflação**. Você decide quando tirar. 5 dias agora, 10 depois. O dinheiro está lá, rendendo, esperando você.
+### 4. 13º salário real, não aquela ilusão de dezembro
 
-Em 1 ano, um trabalhador padrão acumula **~22 dias úteis de férias + R$ 1.600 no fundo**. E se quiser guardar pra tirar 2 meses seguidos no ano que vem? Pode.
+Na CLT atual, o 13º é uma bomba pro empregador e uma ilusão pro trabalhador — você recebe em dezembro um dinheiro que já era seu o ano inteiro, mas que ficou preso.
 
-### 6. Trabalhe em quantos lugares quiser
+Na CLT 2.0, o equivalente ao 13º é **diluído proporcionalmente em cada hora trabalhada**. Ou seja: seu salário por hora já inclui a fração do 13º. Você recebe mais todo mês, não uma vez por ano. E se sair no meio do ano? Já recebeu tudo proporcional. Sem esperar. Sem perder.
+
+### 5. Demissão nunca mais tira seus direitos
+
+Na CLT atual, se você é demitido antes de completar 12 meses, perde férias. Se não completou tempo mínimo, perde seguro.
+
+Na CLT 2.0, **você leva tudo que acumulou**. Trabalhou 3 meses? Tem 3 meses de direitos — férias, FGTS, seguro, tudo. Ninguém tira o que você já construiu.
+
+### 6. Domingo e feriado pagam o DOBRO
+
+Quer trabalhar no domingo? Sua escolha. E ela é recompensada: **200% do valor da hora**. Feriado? Igual. Madrugada? +50%.
+
+Um trabalhador que escolhe fazer 4 domingos no mês, 8 horas cada, ganha **R$ 940 extras** só nesses dias. Isso é quase um salário mínimo inteiro a mais — por escolha própria, não por obrigação.
+
+E mais: quem trabalha em dias especiais **acumula férias em dobro**. Cada 12 domingos trabalhados = 2 dias de férias em vez de 1.
+
+### 7. Férias que são SUAS de verdade
+
+Na CLT atual, suas férias são do patrão — ele decide quando você tira, e se você sai antes de 12 meses, perde tudo.
+
+Na CLT 2.0, suas férias acumulam num **fundo individual que rende acima da inflação** (Selic ou IPCA+3%, o que for maior). Você decide quando tirar. 5 dias agora, 10 depois. O dinheiro está lá, rendendo, esperando você.
+
+Em 1 ano, um trabalhador padrão acumula **~22 dias úteis de férias + R$ 1.600 no fundo**. E se quiser guardar pra tirar 2 meses seguidos no ano que vem? Pode. O dinheiro é seu.
+
+### 8. Trabalhe em quantos lugares quiser — todos formais
 
 Quer ser motoboy de manhã, garçom à noite e fazer entregas no domingo? Na CLT 2.0, cada vínculo é formal e independente. Cada hora em cada lugar gera proteção completa. Tudo soma na sua conta.
 
+Isso vale pra todo mundo:
+- **Motoristas de app** — cada corrida gera proteção
+- **Taxistas** — formalizados por hora, com todos os direitos
+- **Diaristas** — cada casa é um vínculo, cada hora conta
+- **Freelancers** — cada projeto gera FGTS, férias, INSS
+- **Professores** — 3 escolas = 3 vínculos formais somando
+
 Um trabalhador com 3 vínculos parciais pode acumular **mais FGTS e mais férias** do que um celetista tradicional com 1 emprego fixo.
 
-### 7. Nunca mais "ficar até terminar" de graça
+### 9. Nunca mais "ficar até terminar" de graça
 
-Na CLT 2.0, não existe hora não remunerada. Ficou 30 minutos a mais? São 30 minutos pagos. O relógio não para. Cada minuto conta.
+Na CLT 2.0, não existe hora não remunerada. Ficou 30 minutos a mais? São 30 minutos pagos. Chegou 15 minutos antes pra preparar? Conta. **O relógio não para. Cada minuto vale dinheiro.**
 
-### 8. Seguro-desemprego proporcional
+Acabou aquela cultura de "vestir a camisa" que na prática significa trabalhar de graça.
 
-Na CLT atual, se você não completou o tempo mínimo, não tem seguro. Na CLT 2.0, cada hora trabalhada acumula crédito de seguro. Trabalhou pouco? Recebe pouco. Trabalhou muito? Recebe mais. **Mas nunca zero.**
+### 10. Seguro-desemprego que não te abandona
 
-### 9. Você é tratado como adulto
+Na CLT atual, se você não completou o tempo mínimo, não tem seguro. Trabalhou 5 meses? Azar. Zero.
 
-A CLT atual parte do princípio de que você não é capaz de decidir sua própria vida. A CLT 2.0 diz: você é adulto. O Estado garante o piso e a proteção. A decisão de como organizar sua vida é sua.
+Na CLT 2.0, cada hora trabalhada acumula crédito de seguro. Trabalhou pouco? Recebe pouco. Trabalhou muito? Recebe mais. **Mas nunca zero.** E não precisa de tempo mínimo contínuo — o que importa é o acumulado total.
 
-### 10. Proteção real, não proteção de papel
+### 11. Você é tratado como adulto
 
-40 milhões de brasileiros têm "direitos" na Constituição que nunca viram na prática. A CLT 2.0 transforma direito abstrato em dinheiro real caindo na conta a cada hora trabalhada.
+A CLT atual parte do princípio de que você não é capaz de decidir sua própria vida. Por isso te proíbe de trabalhar mais, te obriga a tirar férias quando o patrão quer, te impede de ter múltiplos vínculos facilmente.
+
+A CLT 2.0 diz: **você é adulto**. Quer trabalhar mais esse mês pra pagar uma dívida? Pode. Quer tirar 3 semanas de férias agora? Pode. Quer trabalhar só fins de semana? Pode. A decisão é sua. O Estado garante o piso, não a decisão.
+
+### 12. Proteção real, não proteção de papel
+
+40 milhões de brasileiros têm "direitos" na Constituição que nunca viram na prática. A CLT 2.0 transforma direito abstrato em **dinheiro real caindo na conta a cada hora trabalhada**. Não é promessa. É depósito.
 
 ---
 
-## As 5 maiores vantagens pro empregador
+## As 7 maiores vantagens pro empregador
 
-### 1. Custo 100% previsível
+### 1. Custo 100% previsível — uma conta só
 
-Hoje, contratar alguém é uma aposta. Passivo trabalhista, férias acumuladas, processos surpresa. Na CLT 2.0: **custo fixo por hora**. Uma conta. Sem passivo. Sem surpresa 2 anos depois.
+Hoje, contratar alguém é uma aposta. Quanto vai custar de verdade? Ninguém sabe até o processo trabalhista chegar.
+
+Na CLT 2.0: **custo fixo por hora = salário + encargos explícitos**. Uma conta. Sem variável. Sem surpresa. O contador calcula em 5 segundos.
 
 ### 2. Zero passivo oculto
 
-O maior medo do pequeno empresário é o passivo trabalhista — aquela bomba que explode quando menos espera. Na CLT 2.0, não existe passivo. Tudo é pago proporcionalmente a cada hora. **O que foi pago, está quitado.**
+O maior pesadelo do empresário brasileiro é o passivo trabalhista — férias acumuladas, horas extras não pagas, processos que explodem anos depois.
 
-### 3. Liberdade pra contratar sem medo
+Na CLT 2.0, **não existe passivo**. Tudo é pago proporcionalmente a cada hora. Férias? Depositadas no fundo do trabalhador em tempo real. FGTS? Idem. O que foi pago, está quitado. Pra sempre.
 
-Quando o custo é claro e o risco é zero, o empresário contrata mais. Simples assim. A CLT 2.0 destrói a barreira que faz milhões de empregadores preferirem a informalidade.
+### 3. Contrate quantas pessoas precisar, sem medo
+
+Precisa de 3 pessoas no sábado e 1 na segunda? Contrata. O custo é por hora. Não precisa de contrato mensal, não gera passivo, não complica.
+
+Isso é transformador pra:
+- **Restaurantes** — escala variável por demanda
+- **Comércio** — reforço em datas sazonais
+- **Eventos** — equipe por dia
+- **Startups** — crescimento gradual sem risco
 
 ### 4. Fim da judicialização
 
-Sem ambiguidade, sem interpretação subjetiva, sem "depende do juiz". Tudo é explícito, proporcional e auditável. Menos processo = menos custo = mais investimento.
+Sem ambiguidade, sem interpretação subjetiva, sem "depende do juiz". Tudo é explícito, proporcional e auditável. **Menos processo = menos custo = mais investimento no negócio.**
 
-### 5. Competitividade real
+### 5. Atrai mais gente boa
 
-Empresas brasileiras competem com o mundo inteiro. Ter um sistema trabalhista claro, moderno e previsível é vantagem competitiva. A CLT 2.0 coloca o Brasil no mesmo nível dos países mais produtivos do mundo.
+Quando o trabalhador sabe que cada hora vale, que domingo paga dobro, que férias acumulam de verdade — ele QUER trabalhar pra você. A CLT 2.0 torna a formalidade atraente. Menos rotatividade, mais comprometimento.
+
+### 6. Competitividade internacional
+
+Empresas brasileiras competem com o mundo inteiro. Ter um sistema trabalhista claro, moderno e previsível é vantagem competitiva real. A CLT 2.0 coloca o Brasil no mesmo nível dos países mais produtivos do planeta.
+
+### 7. Formalizar é mais barato que informalizar
+
+Hoje, muitos empregadores preferem a informalidade porque formalizar é caro, burocrático e arriscado. Na CLT 2.0, formalizar é **simples, previsível e sem risco**. O incentivo se inverte: vale mais a pena estar dentro do sistema do que fora.
 
 ---
 
@@ -104,9 +165,9 @@ Empresas brasileiras competem com o mundo inteiro. Ter um sistema trabalhista cl
 
 Não é teoria. Não é utopia. É o que países desenvolvidos já fazem:
 
-🇦🇺 **Austrália** — Trabalhadores "casual" recebem +25% por hora como compensação proporcional. Podem trabalhar em múltiplos lugares. Direitos proporcionais às horas. Resultado: desemprego de 3,5% e um dos maiores salários médios do mundo.
+🇦🇺 **Austrália** — Trabalhadores "casual" recebem +25% por hora como compensação proporcional. Podem trabalhar em múltiplos lugares com proteção total. Resultado: desemprego de 3,5% e um dos maiores salários médios do mundo.
 
-🇯🇵 **Japão** — Salário mínimo definido por hora e por região. Part-timers têm seguro social proporcional. Lei de 2020 proíbe discriminação entre part-time e full-time. Resultado: 40% da força de trabalho é part-time com proteção total.
+🇯🇵 **Japão** — Salário mínimo definido por hora e por região. Part-timers têm seguro social proporcional. Lei de 2020 proíbe discriminação entre part-time e full-time no mesmo cargo. Resultado: 40% da força de trabalho é part-time com proteção completa.
 
 🇳🇱 **Holanda** — 50% da força de trabalho é part-time. Direitos 100% proporcionais às horas. Sem distinção legal entre quem trabalha 20h ou 40h. Resultado: um dos maiores índices de satisfação no trabalho do mundo.
 
@@ -125,10 +186,25 @@ O que esses países têm em comum? **A hora é a unidade base. Direitos são pro
 | Renda mensal | ~R$ 2.500 | ~R$ 3.200 (dom = 200%) |
 | FGTS acumulado/ano | R$ 0 | R$ 2.688 |
 | Férias/ano | 0 dias | 22 dias + fundo de R$ 1.600 |
+| 13º | R$ 0 | ~R$ 267/mês (proporcional) |
 | Seguro se parar | Nada | Proporcional ao acumulado |
 | INSS/aposentadoria | Nada | Contribuindo desde o dia 1 |
+| Acidentou? | Problema dele | INSS cobre |
 
-**Diferença em 5 anos:** mais de **R$ 25.000** em proteção acumulada que hoje simplesmente não existe.
+**Diferença em 5 anos:** mais de **R$ 30.000** em proteção acumulada que hoje simplesmente não existe.
+
+### Taxista / Motorista de app
+
+| | Hoje | CLT 2.0 |
+|---|---|---|
+| Vínculo formal | Nenhum | Sim, por hora |
+| Pode rodar pra vários apps | Sim, sem proteção | Sim, COM proteção em cada um |
+| FGTS | R$ 0 | Acumula a cada corrida |
+| Férias | Nunca | Acumula proporcionalmente |
+| Ficou doente 1 semana | Sem renda | INSS cobre |
+| Aposentadoria | Só se pagar MEI | Automática |
+
+**Mesmo trabalho. Mesma liberdade. Proteção total.**
 
 ### Diarista (3 casas, 6h/dia, 3 dias/semana)
 
@@ -138,6 +214,7 @@ O que esses países têm em comum? **A hora é a unidade base. Direitos são pro
 | Vínculos formais | 0 | 3 |
 | FGTS acumulado/ano | R$ 0 | R$ 1.152 |
 | Férias/ano | 0 | 12 dias + fundo |
+| 13º | R$ 0 | ~R$ 100/mês (proporcional) |
 | Ficou doente? | Sem renda | INSS cobre |
 
 **Mesmo salário. Dignidade total.**
@@ -146,26 +223,29 @@ O que esses países têm em comum? **A hora é a unidade base. Direitos são pro
 
 | | CLT atual | CLT 2.0 |
 |---|---|---|
-| Sábado + Domingo, 8h/dia | R$ 590/mês | R$ 1.180/mês (200% dom) |
+| Sáb + Dom, 8h/dia | ~R$ 590/mês | ~R$ 1.400/mês (sáb 150% + dom 200%) |
 | Férias | Só após 12 meses | Acumula em dobro desde o dia 1 |
+| 13º | Só em dezembro | Proporcional todo mês |
 | Pode ter outro emprego na semana? | Complicado | Sim, formal e protegido |
 
-**Quem escolhe trabalhar quando ninguém quer, ganha o dobro. Por escolha, não por obrigação.**
+**Quem escolhe trabalhar quando ninguém quer, ganha muito mais.**
 
 ---
 
 ## O que o Congresso te oferece vs. o que você merece
 
-| | PL do Governo | CLT 2.0 |
+| | PL do Governo (2026) | CLT 2.0 |
 |---|---|---|
-| Resolve pra quantos? | 14 milhões | 54 milhões |
+| Resolve pra quantos? | 14 milhões | 54 milhões+ |
 | Muda a lógica? | Não (troca escala) | Sim (hora como unidade) |
 | Protege informal? | Não | Sim |
-| Dá liberdade? | Não (impõe 5x2) | Sim (você escolhe) |
+| Acaba com banco de horas? | Não | Sim |
+| Dá liberdade de escolha? | Não (impõe 5x2) | Sim (você decide) |
 | Beneficia empregador? | Não (aumenta custo) | Sim (custo previsível) |
 | Reduz informalidade? | Não | Sim |
-| Reduz processos? | Não | Sim |
-| Funciona pra apps? | Não | Sim |
+| Reduz processos trabalhistas? | Não | Sim |
+| Funciona pra apps e motoristas? | Não | Sim |
+| 13º proporcional? | Não (mantém lógica antiga) | Sim (diluído por hora) |
 
 ---
 
@@ -173,17 +253,17 @@ O que esses países têm em comum? **A hora é a unidade base. Direitos são pro
 
 > **Autonomia com proteção. Não tutela com proibição.**
 
-A CLT atual assume que você não é capaz de decidir sobre sua própria vida. Por isso te proíbe, te limita, te engessa.
+A CLT atual assume que você não é capaz de decidir sobre sua própria vida. Por isso te proíbe, te limita, te engessa. E mesmo assim não te protege de verdade.
 
-A CLT 2.0 assume que você é adulto. Te dá um piso inegociável de proteção. E te dá liberdade pra construir a vida que você quer.
+A CLT 2.0 assume que você é adulto. Te dá um piso inegociável de proteção — que ninguém pode tirar. E te dá liberdade pra construir a vida que você quer.
 
-O Estado não desaparece. Ele muda de papel: de tutor pra garantidor.
+**Descanso é um direito. Trabalhar também. O erro é transformar qualquer um dos dois em obrigação.**
 
 ---
 
 ## Isso faz sentido pra você?
 
-Se faz, compartilha. Se não faz, diz por quê.
+Se faz, compartilha. Se não faz, diz por quê. Comenta. Questiona. Desafia.
 
 O debate precisa sair do binário "6x1 vs 5x2" e entrar no século XXI.
 
