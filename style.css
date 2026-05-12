@@ -12,7 +12,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background: var(--paper);
   color: var(--ink);
   overflow-x: hidden;
@@ -120,17 +120,17 @@ nav {
 }
 
 .hero h1 {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(3.2rem, 9vw, 7rem);
-  font-weight: 800;
+  font-weight: 900;
   line-height: 0.95;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   margin-bottom: 2rem;
 }
 
 .hero h1 em {
-  font-family: 'Libre Baskerville', serif;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   color: var(--red);
 }
 
@@ -212,7 +212,7 @@ nav {
 }
 
 .break-answer {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.4rem, 3.5vw, 2.2rem);
   color: var(--muted);
   font-style: italic;
@@ -273,9 +273,10 @@ nav {
 .tag.light { color: rgba(244,241,235,0.4); }
 
 .section-head h2, .stories-inner h2, .compare-section h2 {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
@@ -331,12 +332,12 @@ nav {
 }
 
 .quote-section blockquote {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   line-height: 1.4;
   max-width: 750px;
   margin: 0 auto;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .quote-section blockquote span { color: var(--red); }
@@ -414,9 +415,10 @@ nav {
 }
 
 .cta-section h2 {
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  font-weight: 900;
+  letter-spacing: -0.02em;
   margin-bottom: 1rem;
 }
 
