@@ -1,0 +1,13 @@
+{
+  "name": "todahoraconta-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "post": "node post.js",
+    "test": "node post.js --dry-run"
+  },
+  "dependencies": {
+    "twitter-api-v2": "1.18.2"
+  }
+}
