@@ -1,0 +1,24 @@
+name: Reply to Viral Tweets
+on:
+  schedule:
+    - cron: '30 13,17,21 * * *'  # 3x/day: 10:30, 14:30, 18:30 BRT
+  workflow_dispatch: {}
+
+jobs:
+  reply:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: agent
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install
+      - run: node reply.js
+        env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_SECRET_KEY }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}

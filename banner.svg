@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500">
+  <rect width="1500" height="500" fill="#0b0b0f"/>
+  
+  <!-- Glows -->
+  <ellipse cx="750" cy="250" rx="600" ry="200" fill="#e8290b" opacity="0.04"/>
+  
+  <!-- Decorative line -->
+  <rect x="600" y="160" width="60" height="3" fill="#e8290b"/>
+  
+  <!-- All text centered vertically in safe zone (175-325px) -->
+  <text x="750" y="230" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="72" fill="#faf8f4" letter-spacing="-2">TODA HORA CONTA<tspan fill="#e8290b">.</tspan></text>
+  
+  <text x="750" y="295" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="32" fill="#e8290b" opacity="0.8">cada hora vale.</text>
+  
+  <text x="750" y="345" text-anchor="middle" font-family="monospace" font-size="16" fill="#71706a" letter-spacing="4">AUTONOMIA COM PROTEÇÃO — CLT 2.0</text>
+</svg>
