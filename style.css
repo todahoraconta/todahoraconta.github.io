@@ -440,23 +440,24 @@ nav {
 }
 
 .share-btn {
-  padding: 0.85rem 1.6rem;
-  border-radius: 100px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: 0.3s;
-  letter-spacing: -0.01em;
 }
 
 .share-btn.x { background: #0f1419; color: white; }
-.share-btn.x:hover { background: #1a2530; }
+.share-btn.x:hover { background: #1a2530; transform: scale(1.1); }
 .share-btn.wpp { background: #25d366; color: white; }
-.share-btn.wpp:hover { background: #1fb855; }
+.share-btn.wpp:hover { background: #1fb855; transform: scale(1.1); }
 .share-btn.tg { background: #229ed9; color: white; }
-.share-btn.tg:hover { background: #1a8ac2; }
+.share-btn.tg:hover { background: #1a8ac2; transform: scale(1.1); }
 .share-btn.li { background: #0a66c2; color: white; }
-.share-btn.li:hover { background: #084e96; }
+.share-btn.li:hover { background: #084e96; transform: scale(1.1); }
 
 .copy-link {
   font-size: 0.85rem;
