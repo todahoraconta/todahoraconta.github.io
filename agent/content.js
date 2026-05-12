@@ -1,29 +1,29 @@
 const TWEETS = [
   // === ABERTURA / CONCEITO ===
-  `E se o problema do trabalho no Brasil não fosse trabalhar demais, mas trabalhar sem que cada hora valha alguma coisa?\n\nToda hora deveria gerar dinheiro + direitos. Sem exceção.\n\n#TodaHoraConta #CLT20\n\ntodahoraconta.com`,
+  `E se o problema do trabalho no Brasil não fosse trabalhar demais, mas trabalhar sem que cada hora valha alguma coisa?\n\nToda hora deveria gerar dinheiro + direitos. Sem exceção.\n\n#TodaHoraConta #CLT20 #escala6x1 #FimDa6x1\n\ntodahoraconta.com`,
 
-  `O Congresso quer trocar 6x1 por 5x2.\n\nIsso é como trocar a cor da parede de uma casa com a fundação rachada.\n\nO problema não é quantos dias. É que cada hora precisa valer.\n\n#TodaHoraConta @clt20`,
+  `O Congresso quer trocar 6x1 por 5x2.\n\nIsso é como trocar a cor da parede de uma casa com a fundação rachada.\n\nO problema não é quantos dias. É que cada hora precisa valer.\n\n#FimDa6x1 #TodaHoraConta @clt20`,
 
-  `Descanso é um direito.\nTrabalhar também.\n\nO erro é transformar qualquer um dos dois em obrigação.\n\n#TodaHoraConta #CLT20 @clt20`,
+  `Descanso é um direito.\nTrabalhar também.\n\nO erro é transformar qualquer um dos dois em obrigação.\n\n#escala6x1 #TodaHoraConta #CLT20 @clt20`,
 
   // === HUMANO / EMOCIONAL ===
-  `Tem gente que precisa de uma hora a mais hoje pra pagar uma conta.\nTem gente que quer concentrar trabalho pra viajar depois.\nTem gente que prefere trabalhar de madrugada.\n\nPor que a lei decide por elas?\n\n#TodaHoraConta @clt20`,
+  `Tem gente que precisa de uma hora a mais hoje pra pagar uma conta.\nTem gente que quer concentrar trabalho pra viajar depois.\nTem gente que prefere trabalhar de madrugada.\n\nPor que a lei decide por elas?\n\n#escala6x1 #TodaHoraConta @clt20`,
 
-  `Trabalhou 5 meses e foi demitido?\n\nCLT atual: perdeu tudo.\nCLT 2.0: acumulou 5 meses de direitos. Ponto.\n\nProporcionalidade > tudo ou nada.\n\n#TodaHoraConta #CLT20\n\ntodahoraconta.com`,
+  `Trabalhou 5 meses e foi demitido?\n\nCLT atual: perdeu tudo.\nCLT 2.0: acumulou 5 meses de direitos. Ponto.\n\nProporcionalidade > tudo ou nada.\n\n#FimDa6x1 #TodaHoraConta #CLT20\n\ntodahoraconta.com`,
 
-  `O direito ao descanso é inviolável.\nO momento de exercê-lo é decisão do trabalhador.\n\nIsso não elimina o descanso. Elimina o paternalismo.\n\n#TodaHoraConta @clt20`,
+  `O direito ao descanso é inviolável.\nO momento de exercê-lo é decisão do trabalhador.\n\nIsso não elimina o descanso. Elimina o paternalismo.\n\n#escala6x1 #TodaHoraConta @clt20`,
 
   // === EXEMPLOS REAIS ===
-  `Hoje um motoboy trabalha pra 3 apps sem proteção nenhuma.\n\nNa CLT 2.0, cada hora dele gera FGTS, férias e seguro. Automaticamente.\n\nIsso é proteção real, não proteção de papel.\n\n#TodaHoraConta @clt20\n\ntodahoraconta.com`,
+  `Hoje um motoboy trabalha pra 3 apps sem proteção nenhuma.\n\nNa CLT 2.0, cada hora dele gera FGTS, férias e seguro. Automaticamente.\n\nIsso é proteção real, não proteção de papel.\n\n#escala6x1 #FimDa6x1 #TodaHoraConta @clt20\n\ntodahoraconta.com`,
 
-  `A diarista que trabalha em 4 casas não tem direito a nada.\n\nNa CLT 2.0, cada hora em cada casa acumula proteção. Sem burocracia.\n\n#TodaHoraConta #CLT20 @clt20`,
+  `A diarista que trabalha em 4 casas não tem direito a nada.\n\nNa CLT 2.0, cada hora em cada casa acumula proteção. Sem burocracia.\n\n#escala6x1 #TodaHoraConta #CLT20 @clt20`,
 
-  `O jovem que quer trabalhar fim de semana pra juntar dinheiro?\n\nNa CLT 2.0: ganha 200% do salário mínimo/hora e acumula férias em dobro.\n\nPor escolha. Não por obrigação.\n\n#TodaHoraConta @clt20`,
+  `O jovem que quer trabalhar fim de semana pra juntar dinheiro?\n\nNa CLT 2.0: ganha 200% do salário mínimo/hora e acumula férias em dobro.\n\nPor escolha. Não por obrigação.\n\n#FimDa6x1 #TodaHoraConta @clt20`,
 
   // === DADOS ===
-  `40 milhões de brasileiros trabalham informalmente.\n14 milhões estão na escala 6x1.\n\nO PL do governo resolve pra 14 milhões.\nA CLT 2.0 resolve pra 54 milhões.\n\nQual faz mais sentido?\n\n#TodaHoraConta @clt20\n\ntodahoraconta.com`,
+  `40 milhões de brasileiros trabalham informalmente.\n14 milhões estão na escala 6x1.\n\nO PL do governo resolve pra 14 milhões.\nA CLT 2.0 resolve pra 54 milhões.\n\nQual faz mais sentido?\n\n#escala6x1 #FimDa6x1 #TodaHoraConta @clt20\n\ntodahoraconta.com`,
 
-  `500 mil afastamentos por doenças do trabalho em 2024.\n\nA solução não é proibir trabalho. É valorizar cada hora e dar liberdade real de escolha.\n\n#TodaHoraConta #CLT20 @clt20`,
+  `500 mil afastamentos por doenças do trabalho em 2024.\n\nA solução não é proibir trabalho. É valorizar cada hora e dar liberdade real de escolha.\n\n#escala6x1 #TodaHoraConta #CLT20 @clt20`,
 
   // === EMPREGADOR ===
   `Empregador: você sabe exatamente quanto custa cada hora do seu funcionário?\n\nNa CLT atual, nem o contador sabe.\nNa CLT 2.0, é uma conta só. Sem passivo oculto.\n\nIsso não é contra trabalhador. É a favor de clareza.\n\n#TodaHoraConta @clt20`,
