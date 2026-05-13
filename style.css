@@ -332,6 +332,9 @@ nav {
   font-weight: 600;
   list-style: none;
   transition: 0.3s;
+  padding: 0.75rem 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .pilar-detail summary:hover { color: var(--ink); }
@@ -366,7 +369,9 @@ nav {
   letter-spacing: 0.05em;
   border: none;
   background: none;
-  padding: 0;
+  padding: 0.75rem 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: 0.3s;
 }
 
