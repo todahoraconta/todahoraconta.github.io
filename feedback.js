@@ -1,18 +1,19 @@
-const NS = 'todahoraconta-com';
+const NS = 'todahoraconta';
+const API = 'https://api.counterapi.dev/v1';
 
 async function countHit(key) {
   try {
-    const res = await fetch(`https://api.countapi.xyz/hit/${NS}/${key}`);
+    const res = await fetch(`${API}/${NS}/${key}/up`);
     const data = await res.json();
-    return data.value;
+    return data.count;
   } catch { return null; }
 }
 
 async function countGet(key) {
   try {
-    const res = await fetch(`https://api.countapi.xyz/get/${NS}/${key}`);
+    const res = await fetch(`${API}/${NS}/${key}`);
     const data = await res.json();
-    return data.value;
+    return data.count;
   } catch { return null; }
 }
 
@@ -35,10 +36,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (visitEl && v) visitEl.textContent = v.toLocaleString('pt-BR');
   }
 
-  // Check if already voted
+  // Already voted?
   if (localStorage.getItem('thc-voted')) {
-    if (upEl) upEl.textContent = (await countGet('up')) || 0;
-    if (downEl) downEl.textContent = (await countGet('down')) || 0;
+    if (upEl) upEl.textContent = ((await countGet('up'))?.toLocaleString('pt-BR')) || '0';
+    if (downEl) downEl.textContent = ((await countGet('down'))?.toLocaleString('pt-BR')) || '0';
     if (feedbackSection) feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p>';
     return;
   }
@@ -47,7 +48,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (upEl) upEl.textContent = (await countGet('up')) || 0;
   if (downEl) downEl.textContent = (await countGet('down')) || 0;
 
-  // Vote
   upBtn?.addEventListener('click', async () => {
     localStorage.setItem('thc-voted', 'up');
     upBtn.disabled = downBtn.disabled = true;
