@@ -3,7 +3,7 @@ const API = 'https://api.counterapi.dev/v1';
 
 async function countHit(key) {
   try {
-    const res = await fetch(`${API}/${NS}/${key}/up`);
+    const res = await fetch(`${API}/${NS}/${key}/up/`);
     const data = await res.json();
     return data.count;
   } catch { return null; }
@@ -11,7 +11,7 @@ async function countHit(key) {
 
 async function countGet(key) {
   try {
-    const res = await fetch(`${API}/${NS}/${key}`);
+    const res = await fetch(`${API}/${NS}/${key}/`);
     const data = await res.json();
     return data.count;
   } catch { return null; }
