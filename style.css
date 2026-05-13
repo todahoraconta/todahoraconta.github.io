@@ -41,6 +41,8 @@ nav {
   align-items: center;
   z-index: 100;
   mix-blend-mode: difference;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 .nav-logo {
@@ -52,19 +54,20 @@ nav {
 
 .nav-logo .dot { color: var(--red); }
 
-.nav-links { display: flex; gap: 0.75rem; }
+.nav-links { display: flex; gap: 0.5rem; flex-shrink: 0; }
 
 .nav-cta {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: white;
   text-decoration: none;
   border: 1px solid rgba(255,255,255,0.3);
-  padding: 0.6rem 1.4rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 100px;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 .nav-cta:hover { background: white; color: black; }
