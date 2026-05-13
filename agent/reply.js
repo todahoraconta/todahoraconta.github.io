@@ -43,21 +43,33 @@ async function findAndReply() {
       (b.public_metrics?.like_count || 0) - (a.public_metrics?.like_count || 0)
     );
 
-    const target = sorted[0];
-    const reply = REPLIES[Math.floor(Math.random() * REPLIES.length)];
+    // Try up to 3 tweets in case some restrict replies
+    for (const target of sorted.slice(0, 3)) {
+      const reply = REPLIES[Math.floor(Math.random() * REPLIES.length)];
 
-    console.log(`Replying to tweet ${target.id} (${target.public_metrics?.like_count || 0} likes)`);
-    console.log(`Query: ${query}`);
-    console.log(`Reply: ${reply.substring(0, 60)}...`);
+      console.log(`Trying tweet ${target.id} (${target.public_metrics?.like_count || 0} likes)`);
+      console.log(`Reply: ${reply.substring(0, 60)}...`);
 
-    const result = await client.v2.reply(reply, target.id);
-    console.log(`✅ Reply posted: ${result.data.id}`);
-  } catch (err) {
-    if (err.code === 429) {
-      console.log('⏳ Rate limited, skipping');
-      return;
+      try {
+        const result = await client.v2.reply(reply, target.id);
+        console.log(`✅ Reply posted: ${result.data.id}`);
+        return;
+      } catch (err) {
+        if (err.code === 403) {
+          console.log('⚠️ 403 on this tweet, trying next...');
+          continue;
+        }
+        if (err.code === 429) {
+          console.log('⏳ Rate limited, stopping');
+          return;
+        }
+        console.error('❌ Error:', err.message);
+        process.exit(1);
+      }
     }
-    console.error('❌ Error:', err.message);
+    console.log('⚠️ All targets returned 403, skipping this run');
+  } catch (err) {
+    console.error('❌ Search error:', err.message);
     process.exit(1);
   }
 }
