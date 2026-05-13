@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // Already voted?
-  if (localStorage.getItem('thc-voted')) {
+  if (localStorage.getItem('thc-voted-v2')) {
     if (feedbackSection) {
       feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p>';
     }
@@ -46,14 +46,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Vote handlers
   upBtn?.addEventListener('click', async () => {
-    localStorage.setItem('thc-voted', 'up');
+    localStorage.setItem('thc-voted-v2', 'up');
     upBtn.disabled = downBtn.disabled = true;
     await countHit('up');
     feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Valeu! Compartilha com quem precisa ouvir isso. 🙏</p>';
   });
 
   downBtn?.addEventListener('click', async () => {
-    localStorage.setItem('thc-voted', 'down');
+    localStorage.setItem('thc-voted-v2', 'down');
     upBtn.disabled = downBtn.disabled = true;
     await countHit('down');
     feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--muted);">Valeu pelo feedback! Conta pra gente o que faria diferente.</p>';
