@@ -4,71 +4,58 @@ const API = 'https://api.counterapi.dev/v1';
 async function countHit(key) {
   try {
     const res = await fetch(`${API}/${NS}/${key}/up/`);
+    if (!res.ok) return 0;
     const data = await res.json();
-    return data.count;
-  } catch { return null; }
+    return data.count || 0;
+  } catch { return 0; }
 }
 
 async function countGet(key) {
   try {
     const res = await fetch(`${API}/${NS}/${key}/`);
+    if (!res.ok) return 0;
     const data = await res.json();
-    return data.count;
-  } catch { return null; }
+    return data.count || 0;
+  } catch { return 0; }
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
   const visitEl = document.getElementById('visit-count');
-  const upEl = document.getElementById('up-count');
-  const downEl = document.getElementById('down-count');
+  const feedbackSection = document.querySelector('.feedback-widget');
   const upBtn = document.getElementById('vote-up');
   const downBtn = document.getElementById('vote-down');
-  const feedbackSection = document.querySelector('.feedback-widget');
 
   // Visit: 1x por dia
   const today = new Date().toDateString();
   if (localStorage.getItem('thc-visit') !== today) {
     localStorage.setItem('thc-visit', today);
     const v = await countHit('visits');
-    if (visitEl && v) visitEl.textContent = v.toLocaleString('pt-BR');
+    if (visitEl) visitEl.textContent = v.toLocaleString('pt-BR');
   } else {
     const v = await countGet('visits');
-    if (visitEl && v) visitEl.textContent = v.toLocaleString('pt-BR');
+    if (visitEl) visitEl.textContent = v.toLocaleString('pt-BR');
   }
 
   // Already voted?
   if (localStorage.getItem('thc-voted')) {
-    const upCount = (await countGet('up')) || 0;
-    const downCount = (await countGet('down')) || 0;
-    if (upEl) upEl.textContent = upCount;
-    if (downEl) downEl.textContent = downCount;
-    if (feedbackSection) feedbackSection.innerHTML = `<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p><p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;">👍 ${upCount} · 👎 ${downCount}</p>`;
+    if (feedbackSection) {
+      feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p>';
+    }
     return;
   }
 
-  // Load counts
-  if (upEl) upEl.textContent = (await countGet('up')) || 0;
-  if (downEl) downEl.textContent = (await countGet('down')) || 0;
-
+  // Vote handlers
   upBtn?.addEventListener('click', async () => {
     localStorage.setItem('thc-voted', 'up');
     upBtn.disabled = downBtn.disabled = true;
-    const v = await countHit('up');
-    if (upEl && v) upEl.textContent = v.toLocaleString('pt-BR');
-    upBtn.style.transform = 'scale(1.3)';
-    setTimeout(() => {
-      feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Valeu! Compartilha com quem precisa ouvir isso. 🙏</p>';
-    }, 800);
+    await countHit('up');
+    feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Valeu! Compartilha com quem precisa ouvir isso. 🙏</p>';
   });
 
   downBtn?.addEventListener('click', async () => {
     localStorage.setItem('thc-voted', 'down');
     upBtn.disabled = downBtn.disabled = true;
-    const v = await countHit('down');
-    if (downEl && v) downEl.textContent = v.toLocaleString('pt-BR');
-    downBtn.style.transform = 'scale(1.3)';
-    setTimeout(() => {
-      feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--muted);">Valeu pelo feedback! Conta pra gente o que faria diferente.</p>';
-    }, 800);
+    await countHit('down');
+    feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--muted);">Valeu pelo feedback! Conta pra gente o que faria diferente.</p>';
   });
 });
