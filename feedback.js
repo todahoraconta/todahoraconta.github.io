@@ -17,33 +17,56 @@ async function countGet(key) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  // Visit counter
   const visitEl = document.getElementById('visit-count');
-  if (visitEl) {
-    const v = await countHit('visits');
-    if (v) visitEl.textContent = v.toLocaleString('pt-BR');
-  }
-
-  // Load current vote counts
   const upEl = document.getElementById('up-count');
   const downEl = document.getElementById('down-count');
+  const upBtn = document.getElementById('vote-up');
+  const downBtn = document.getElementById('vote-down');
+  const feedbackSection = document.querySelector('.feedback-widget');
+
+  // Visit: 1x por dia
+  const today = new Date().toDateString();
+  if (localStorage.getItem('thc-visit') !== today) {
+    localStorage.setItem('thc-visit', today);
+    const v = await countHit('visits');
+    if (visitEl && v) visitEl.textContent = v.toLocaleString('pt-BR');
+  } else {
+    const v = await countGet('visits');
+    if (visitEl && v) visitEl.textContent = v.toLocaleString('pt-BR');
+  }
+
+  // Check if already voted
+  if (localStorage.getItem('thc-voted')) {
+    if (upEl) upEl.textContent = (await countGet('up')) || 0;
+    if (downEl) downEl.textContent = (await countGet('down')) || 0;
+    if (feedbackSection) feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p>';
+    return;
+  }
+
+  // Load counts
   if (upEl) upEl.textContent = (await countGet('up')) || 0;
   if (downEl) downEl.textContent = (await countGet('down')) || 0;
 
-  // Vote buttons
-  document.getElementById('vote-up')?.addEventListener('click', async (e) => {
-    e.target.disabled = true;
-    document.getElementById('vote-down').disabled = true;
+  // Vote
+  upBtn?.addEventListener('click', async () => {
+    localStorage.setItem('thc-voted', 'up');
+    upBtn.disabled = downBtn.disabled = true;
     const v = await countHit('up');
     if (upEl && v) upEl.textContent = v.toLocaleString('pt-BR');
-    e.target.style.transform = 'scale(1.3)';
+    upBtn.style.transform = 'scale(1.3)';
+    setTimeout(() => {
+      feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Valeu! Compartilha com quem precisa ouvir isso. 🙏</p>';
+    }, 800);
   });
 
-  document.getElementById('vote-down')?.addEventListener('click', async (e) => {
-    e.target.disabled = true;
-    document.getElementById('vote-up').disabled = true;
+  downBtn?.addEventListener('click', async () => {
+    localStorage.setItem('thc-voted', 'down');
+    upBtn.disabled = downBtn.disabled = true;
     const v = await countHit('down');
     if (downEl && v) downEl.textContent = v.toLocaleString('pt-BR');
-    e.target.style.transform = 'scale(1.3)';
+    downBtn.style.transform = 'scale(1.3)';
+    setTimeout(() => {
+      feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--muted);">Valeu pelo feedback! Conta pra gente o que faria diferente.</p>';
+    }, 800);
   });
 });
