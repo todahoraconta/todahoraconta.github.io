@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Already voted?
   if (localStorage.getItem('thc-voted')) {
-    if (upEl) upEl.textContent = ((await countGet('up'))?.toLocaleString('pt-BR')) || '0';
-    if (downEl) downEl.textContent = ((await countGet('down'))?.toLocaleString('pt-BR')) || '0';
-    if (feedbackSection) feedbackSection.innerHTML = '<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p>';
+    const upCount = (await countGet('up')) || 0;
+    const downCount = (await countGet('down')) || 0;
+    if (upEl) upEl.textContent = upCount;
+    if (downEl) downEl.textContent = downCount;
+    if (feedbackSection) feedbackSection.innerHTML = `<p style="font-size:0.95rem;color:var(--teal);">Obrigado por participar! 🙏</p><p style="font-size:0.85rem;color:var(--muted);margin-top:0.5rem;">👍 ${upCount} · 👎 ${downCount}</p>`;
     return;
   }
 
