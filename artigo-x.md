@@ -181,52 +181,85 @@ O que esses países têm em comum? **A hora é a unidade base. Direitos são pro
 
 ### Motoboy (3 apps, 10h/dia, 6 dias/semana)
 
-| | Hoje (informal) | CLT 2.0 |
-|---|---|---|
-| Renda mensal | ~R$ 2.500 | ~R$ 3.200 (dom = 200%) |
-| FGTS acumulado/ano | R$ 0 | R$ 2.688 |
-| Férias/ano | 0 dias | 22 dias + fundo de R$ 1.600 |
-| 13º | R$ 0 | ~R$ 267/mês (proporcional) |
-| Seguro se parar | Nada | Proporcional ao acumulado |
-| INSS/aposentadoria | Nada | Contribuindo desde o dia 1 |
-| Acidentou? | Problema dele | INSS cobre |
+**Hoje (informal):**
+- Renda mensal: ~R$ 2.500
+- FGTS acumulado/ano: R$ 0
+- Férias/ano: 0 dias
+- 13º: R$ 0
+- Seguro se parar: Nada
+- INSS/aposentadoria: Nada
+- Acidentou? Problema dele
+
+**Na CLT 2.0:**
+- Renda mensal: ~R$ 3.200 (domingo = 200%)
+- FGTS acumulado/ano: R$ 2.688
+- Férias/ano: 22 dias + fundo de R$ 1.600
+- 13º: ~R$ 267/mês (proporcional, cai todo mês)
+- Seguro se parar: Proporcional ao acumulado
+- INSS/aposentadoria: Contribuindo desde o dia 1
+- Acidentou? INSS cobre
 
 **Diferença em 5 anos:** mais de **R$ 30.000** em proteção acumulada que hoje simplesmente não existe.
 
+---
+
 ### Taxista / Motorista de app
 
-| | Hoje | CLT 2.0 |
-|---|---|---|
-| Vínculo formal | Nenhum | Sim, por hora |
-| Pode rodar pra vários apps | Sim, sem proteção | Sim, COM proteção em cada um |
-| FGTS | R$ 0 | Acumula a cada corrida |
-| Férias | Nunca | Acumula proporcionalmente |
-| Ficou doente 1 semana | Sem renda | INSS cobre |
-| Aposentadoria | Só se pagar MEI | Automática |
+**Hoje:**
+- Vínculo formal: Nenhum
+- Pode rodar pra vários apps: Sim, mas sem proteção nenhuma
+- FGTS: R$ 0
+- Férias: Nunca
+- Ficou doente 1 semana: Sem renda
+- Aposentadoria: Só se pagar MEI do próprio bolso
+
+**Na CLT 2.0:**
+- Vínculo formal: Sim, por hora, em cada app
+- Pode rodar pra vários apps: Sim, COM proteção em cada um
+- FGTS: Acumula a cada corrida
+- Férias: Acumula proporcionalmente
+- Ficou doente 1 semana: INSS cobre
+- Aposentadoria: Automática, desde a primeira corrida
 
 **Mesmo trabalho. Mesma liberdade. Proteção total.**
 
+---
+
 ### Diarista (3 casas, 6h/dia, 3 dias/semana)
 
-| | Hoje (informal) | CLT 2.0 |
-|---|---|---|
-| Renda mensal | ~R$ 1.200 | ~R$ 1.200 (mesmo valor) |
-| Vínculos formais | 0 | 3 |
-| FGTS acumulado/ano | R$ 0 | R$ 1.152 |
-| Férias/ano | 0 | 12 dias + fundo |
-| 13º | R$ 0 | ~R$ 100/mês (proporcional) |
-| Ficou doente? | Sem renda | INSS cobre |
+**Hoje (informal):**
+- Renda mensal: ~R$ 1.200
+- Vínculos formais: 0
+- FGTS acumulado/ano: R$ 0
+- Férias/ano: 0
+- 13º: R$ 0
+- Ficou doente? Sem renda
+
+**Na CLT 2.0:**
+- Renda mensal: ~R$ 1.200 (mesmo valor)
+- Vínculos formais: 3 (um por casa)
+- FGTS acumulado/ano: R$ 1.152
+- Férias/ano: 12 dias + fundo
+- 13º: ~R$ 100/mês (proporcional)
+- Ficou doente? INSS cobre
 
 **Mesmo salário. Dignidade total.**
 
+---
+
 ### Jovem que trabalha fins de semana
 
-| | CLT atual | CLT 2.0 |
-|---|---|---|
-| Sáb + Dom, 8h/dia | ~R$ 590/mês | ~R$ 1.400/mês (sáb 150% + dom 200%) |
-| Férias | Só após 12 meses | Acumula em dobro desde o dia 1 |
-| 13º | Só em dezembro | Proporcional todo mês |
-| Pode ter outro emprego na semana? | Complicado | Sim, formal e protegido |
+**Na CLT atual:**
+- Sáb + Dom, 8h/dia: ~R$ 590/mês
+- Férias: Só após 12 meses
+- 13º: Só em dezembro
+- Pode ter outro emprego na semana? Complicado
+
+**Na CLT 2.0:**
+- Sáb + Dom, 8h/dia: ~R$ 1.400/mês (sáb 150% + dom 200%)
+- Férias: Acumula em dobro desde o dia 1
+- 13º: Proporcional todo mês
+- Pode ter outro emprego na semana? Sim, formal e protegido
 
 **Quem escolhe trabalhar quando ninguém quer, ganha muito mais.**
 
@@ -234,18 +267,27 @@ O que esses países têm em comum? **A hora é a unidade base. Direitos são pro
 
 ## O que o Congresso te oferece vs. o que você merece
 
-| | PL do Governo (2026) | CLT 2.0 |
-|---|---|---|
-| Resolve pra quantos? | 14 milhões | 54 milhões+ |
-| Muda a lógica? | Não (troca escala) | Sim (hora como unidade) |
-| Protege informal? | Não | Sim |
-| Acaba com banco de horas? | Não | Sim |
-| Dá liberdade de escolha? | Não (impõe 5x2) | Sim (você decide) |
-| Beneficia empregador? | Não (aumenta custo) | Sim (custo previsível) |
-| Reduz informalidade? | Não | Sim |
-| Reduz processos trabalhistas? | Não | Sim |
-| Funciona pra apps e motoristas? | Não | Sim |
-| 13º proporcional? | Não (mantém lógica antiga) | Sim (diluído por hora) |
+**PL do Governo (2026):**
+- Resolve pra quantos? 14 milhões
+- Muda a lógica? Não (troca escala)
+- Protege informal? Não
+- Acaba com banco de horas? Não
+- Dá liberdade de escolha? Não (impõe 5x2)
+- Beneficia empregador? Não (aumenta custo)
+- Reduz informalidade? Não
+- Funciona pra apps e motoristas? Não
+- 13º proporcional? Não
+
+**CLT 2.0:**
+- Resolve pra quantos? 54 milhões+
+- Muda a lógica? Sim (hora como unidade)
+- Protege informal? Sim
+- Acaba com banco de horas? Sim
+- Dá liberdade de escolha? Sim (você decide)
+- Beneficia empregador? Sim (custo previsível)
+- Reduz informalidade? Sim
+- Funciona pra apps e motoristas? Sim
+- 13º proporcional? Sim (diluído por hora)
 
 ---
 
