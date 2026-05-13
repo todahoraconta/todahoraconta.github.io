@@ -284,6 +284,21 @@
     <p class="copy-link reveal r-d2">Ou copie: <button onclick="navigator.clipboard.writeText('https://todahoraconta.com');this.textContent='Copiado ✓'" class="copy-btn">todahoraconta.com</button></p>
   </section>
 
+  <!-- FEEDBACK + COUNTER -->
+  <section class="cta-section" style="padding:4rem 2rem;">
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem;"><span id="visit-count">...</span> pessoas já viram essa proposta</p>
+    <p style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;">Faz sentido pra você?</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;align-items:center;">
+      <button id="vote-up" style="font-size:2rem;background:none;border:none;cursor:pointer;transition:0.3s;">👍</button>
+      <span id="up-count" style="font-size:1.1rem;font-weight:700;color:var(--teal);">0</span>
+      <span style="color:var(--line);">|</span>
+      <span id="down-count" style="font-size:1.1rem;font-weight:700;color:var(--red);">0</span>
+      <button id="vote-down" style="font-size:2rem;background:none;border:none;cursor:pointer;transition:0.3s;">👎</button>
+    </div>
+  </section>
+
+  <script src="feedback.js"></script>
+
   <footer>
     <p>Toda Hora Conta © 2026 — Um convite ao debate sobre o futuro do trabalho no nosso Brasil.</p>
     <p class="footer-hash">#TodaHoraConta #CLT20</p>
