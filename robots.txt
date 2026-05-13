@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://todahoraconta.com/sitemap.xml
