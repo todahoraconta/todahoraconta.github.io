@@ -4,24 +4,20 @@ import { TWEETS } from './content.js';
 const DRY_RUN = process.argv.includes('--dry-run');
 
 async function post() {
-  // Use day of year + hour to cycle through all tweets without repeating
   const now = new Date();
   const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
   const hour = now.getUTCHours();
   const index = (dayOfYear * 16 + hour) % TWEETS.length;
 
-  // Add timestamp variation to avoid duplicate detection
-  const suffixes = ['', ' 💡', ' ⚡', ' 🔥', ' 👇', ' 🧵', ' ↓'];
-  const suffixIndex = (dayOfYear + hour) % suffixes.length;
-
-  const tweet = TWEETS[index] + suffixes[suffixIndex];
+  const tweet = TWEETS[index];
+  const mainText = tweet.main;
+  const replyText = tweet.reply;
 
   if (DRY_RUN) {
-    console.log('[DRY RUN] Would post:');
-    console.log('---');
-    console.log(tweet);
-    console.log('---');
-    console.log(`(${tweet.length} chars) [index: ${index}]`);
+    console.log('[DRY RUN]');
+    console.log(`Tweet: ${mainText.substring(0, 80)}...`);
+    console.log(`Reply: ${replyText.substring(0, 80)}...`);
+    console.log(`(${mainText.length} + ${replyText.length} chars) [index: ${index}]`);
     return;
   }
 
@@ -33,12 +29,16 @@ async function post() {
   });
 
   try {
-    const result = await client.v2.tweet(tweet);
-    console.log(`✅ Posted: ${result.data.id}`);
-    console.log(`   Index: ${index}, Chars: ${tweet.length}`);
+    // Post main tweet
+    const result = await client.v2.tweet(mainText);
+    console.log(`✅ Tweet: ${result.data.id}`);
+
+    // Self-reply (creates thread, boosts dwell time + engagement signal)
+    const replyResult = await client.v2.reply(replyText, result.data.id);
+    console.log(`✅ Reply: ${replyResult.data.id}`);
   } catch (err) {
-    if (err.code === 403 && err.message?.includes('duplicate')) {
-      console.log('⚠️ Duplicate detected, skipping');
+    if (err.code === 403) {
+      console.log('⚠️ 403 - possible duplicate, skipping');
       return;
     }
     console.error('❌ Error:', err.message || err);

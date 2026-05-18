@@ -1,9 +1,9 @@
 name: Post Tweet
 on:
   schedule:
-    - cron: '0 10-23 * * *'  # Every hour from 7am to 8pm BRT (UTC-3)
-    - cron: '0 0-1 * * *'    # 9-10pm BRT
-  workflow_dispatch: {}       # Manual trigger
+    # Peak hours BRT: 7h, 9h, 12h, 15h, 18h, 20h (= UTC 10, 12, 15, 18, 21, 23)
+    - cron: '0 10,12,15,18,21,23 * * *'
+  workflow_dispatch: {}
 
 jobs:
   tweet:
